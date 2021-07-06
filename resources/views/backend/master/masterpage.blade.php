@@ -295,7 +295,7 @@
 {{--<script src="{{asset('backend/vendors/flot-spline/js/jquery.flot.spline.min.js')}}"></script>--}}
 {{--<script src="{{asset('backend/vendors/flot.curvedlines/curvedLines.js')}}"></script>--}}
 <!-- DateJS -->
-<script src="{{asset('backend/vendors/DateJS/build/date.js')}}"></script>
+{{--<script src="{{asset('backend/vendors/DateJS/build/date.js')}}"></script>--}}
 
 <!-- JQVMap -->
 {{--<script src="{{asset('backend/vendors/jqvmap/dist/jquery.vmap.js')}}"></script>--}}
