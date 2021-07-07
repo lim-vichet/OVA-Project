@@ -19,3 +19,9 @@ Route::get('/', function () {
 });
 Route::get('header',[HomeController::class,'Header'])->name('header');
 Route::get('index',[HomeController::class,'Index'])->name('index');
+
+
+/**
+ * Backend routes
+*/
+include_once 'backend/backendRoute.php';
