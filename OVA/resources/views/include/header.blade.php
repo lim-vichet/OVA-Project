@@ -18,18 +18,18 @@
         <div class="col-xl-12">
             <div class="menu">
                 <ul>
-                    <li><a href="#">ទំព័រដើម</a></li>
+                    <li><a href="{{route('/')}}">ទំព័រដើម</a></li>
                     <li>
                         <a href="#">អំពីសហគមន៍</a>
                         <ul>
-                            <li><a href="#">នាយកសហគមន៍</a></li>
-                            <li><a href="#">បេសកកម្ម</a></li>
-                            <li><a href="#">ចក្ខុវិស័យ</a></li>
-                            <li><a href="#">រចនាសម្ព័័ន្ធ</a></li>
+                            <li><a href="{{route('director')}}">នាយកសហគមន៍</a></li>
+                            <li><a href="{{route('mission')}}">បេសកកម្ម</a></li>
+                            <li><a href="{{route('vision')}}">ចក្ខុវិស័យ</a></li>
+                            <li><a href="{{route('structure')}}">រចនាសម្ព័័ន្ធ</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">សកម្មភាព</a></li>
-                    <li><a href="#">សប្បុរសធម៍</a></li>
+                    <li><a href="{{route('activity')}}">សកម្មភាព</a></li>
+                    <li><a href="{{route('charity')}}">សប្បុរសធម៍</a></li>
                     <li><a href="#">ទំនាក់ទំនង</a></li>
                 </ul>
             </div>

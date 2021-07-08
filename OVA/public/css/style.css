@@ -54,7 +54,7 @@ body{
 	width: 60%;
 	background: #b9bbbe;
 	/*padding: 40px;*/
-	height: 40px;
+	height: 50px;
 	float: left;
 
 }
@@ -74,9 +74,9 @@ body{
 	color: white;
 	display: block;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 15px;
 	text-align: center;
-	padding: 10px;
+	padding: 14px 10px;
 	/*border-radius: 10px;*/
 }
 .menu ul li a:hover{
@@ -88,6 +88,7 @@ body{
 }
 .menu ul li ul li{
 	float: none;
+	text-align: center;
 
 }
 .menu ul li ul{
@@ -103,11 +104,11 @@ body{
 	width: 40%;
 	background: #b9bbbe;
 	float: left;
-	height: 40px;
+	height: 50px;
 }
 .search .search-button{
-	margin-left: 60px;
-	margin-top: 5px;
+	margin-left: 170px;
+	margin-top: 10px;
 }
 /*Media*/
 .bg3{
@@ -524,6 +525,7 @@ body{
 	height: 300px;
 	background-color: #0c5460;
 	margin-top: 10px;
+	box-shadow: 1px 2px 10px 0 grey;
 
 }
 .footer .footer-item{
@@ -562,10 +564,293 @@ body{
 	margin-top: 5px;
 	padding: 0;
 	/*margin: 0;*/
+	box-shadow: 1px 2px 10px 0 grey;
 }
 .last-footer h1{
 	font-size: 16px;
 	line-height: 45px;
 	color: white;
 	margin-left: 10px;
+}
+/*director*/
+.director{
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	margin: auto;
+	/*background-color: #0c5460;*/
+	margin-top: 5px;
+	overflow: hidden;
+	box-shadow: 1px 2px 10px 0 grey;
+
+}
+.director .box-tell{
+	width: 100%;
+	height: 40px;
+	/*background-color: #b9bbbe;*/
+}
+.director .box-tell h1{
+	font-size: 20px;
+	font-family: 'Moul', cursive;
+	line-height: 60px;
+	margin-left: 20px;
+	color: #0c5460;
+}
+.director .director-detail{
+	width: 100%;
+	height: 100%;
+	/*background-color: #9fcdff;*/
+}
+.director-detail .letter-box{
+	width: 70%;
+	height: 100%;
+	/*background-color: #c69500;*/
+	float: left;
+}
+.letter-box p{
+	margin: 25px;
+	font-size: 18px;
+}
+
+.director-detail .profile-box{
+	width: 30%;
+	height: 60%;
+	/*background-color: red;*/
+	float: left;
+	padding: 20px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.profile-box img{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+/*mission*/
+.mission{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: auto;
+	/*background-color: #00d4b4;*/
+	margin-top: 5px;
+	overflow: hidden;
+	box-shadow: 1px 2px 10px 0 grey;
+}
+.mission .mission-header{
+	width: 100%;
+	height: 50px;
+	/*background-color: #c69500;*/
+}
+.mission-header h1{
+	font-size: 20px;
+	font-family: 'Moul', cursive;
+	line-height: 60px;
+	margin-left: 20px;
+	color: #00d4b4;
+}
+.mission .mission-detail{
+	width: 100%;
+	height: 200px;
+	/*background-color: red;*/
+	padding: 20px;
+	padding-top: 0;
+}
+.mission .mission-detail p{
+	font-size: 18px;
+}
+.mission .mission-image{
+	width: 80%;
+	height: 250px;
+	margin: 10px;
+	background-color: #c69500;
+	text-align: center;
+	margin-left: 10%;
+}
+.mission-image img{
+	width: 100%;
+	height: 100%;
+}
+/*vision*/
+.vision{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: auto;
+	/*background-color: #00d4b4;*/
+	margin-top: 5px;
+	overflow: hidden;
+	box-shadow: 1px 2px 10px 0 grey;
+}
+.vision .vision-header{
+	width: 100%;
+	height: 50px;
+	/*background-color: #c69500;*/
+}
+.vision-header h1{
+	font-size: 20px;
+	font-family: 'Moul', cursive;
+	line-height: 60px;
+	margin-left: 20px;
+	color: #00d4b4;
+}
+.vision .vision-detail{
+	width: 100%;
+	height: 200px;
+	/*background-color: red;*/
+	padding: 20px;
+	padding-top: 0;
+}
+.vision .vision-detail p{
+	font-size: 18px;
+}
+.vision .vision-image{
+	width: 80%;
+	height: 250px;
+	margin: 10px;
+	background-color: #c69500;
+	text-align: center;
+	margin-left: 10%;
+}
+.vision-image img{
+	width: 100%;
+	height: 100%;
+}
+/*structure*/
+.structure{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: auto;
+	/*background-color: #00d4b4;*/
+	margin-top: 5px;
+	overflow: hidden;
+	box-shadow: 1px 2px 10px 0 grey;
+}
+.structure .structure-header{
+	width: 100%;
+	height: 50px;
+	/*background-color: #c69500;*/
+}
+.structure-header h1{
+	font-size: 20px;
+	font-family: 'Moul', cursive;
+	line-height: 60px;
+	margin-left: 20px;
+	color: #00d4b4;
+}
+.structure .structure-detail{
+	width: 100%;
+	height: 200px;
+	/*background-color: red;*/
+	padding: 20px;
+	padding-top: 0;
+}
+.structure .structure-detail p{
+	font-size: 18px;
+}
+.structure .structure-image{
+	width: 80%;
+	/*height: 100%;*/
+	margin: 10px;
+	background-color: #c69500;
+	text-align: center;
+	margin-left: 10%;
+	margin-bottom: 20px;
+}
+.structure-image img{
+	width: 100%;
+	height: 100%;
+}
+/*page-detail*/
+.page-detail{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: auto;
+	/*background-color: #00d4b4;*/
+	margin-top: 5px;
+	overflow: hidden;
+	box-shadow: 1px 2px 10px 0 grey;
+}
+.page-detail .page-detail-header{
+	width: 100%;
+	height: 50px;
+	/*background-color: #c69500;*/
+}
+.page-detail-header h1{
+	font-size: 20px;
+	font-family: 'Moul', cursive;
+	line-height: 60px;
+	margin-left: 20px;
+	color: #00d4b4;
+}
+.page-detail .page-detail-detail{
+	width: 100%;
+	height: 200px;
+	/*background-color: red;*/
+	padding: 20px;
+	padding-top: 0;
+}
+.page-detail .page-detail-detail p{
+	font-size: 18px;
+}
+.page-detail .page-detail-image{
+	width: 96%;
+	/*height: 100%;*/
+	margin: 10px;
+	background-color: #c69500;
+	text-align: center;
+	margin-left: 2%;
+	margin-bottom: 10px;
+}
+.page-detail-image img{
+	width: 100%;
+	height: 100%;
+}
+/*charity*/
+.charity{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: auto;
+	/*background-color: #00d4b4;*/
+	margin-top: 5px;
+	overflow: hidden;
+	box-shadow: 1px 2px 10px 0 grey;
+}
+.charity .charity-header{
+	width: 100%;
+	height: 50px;
+	/*background-color: #c69500;*/
+}
+.charity-header h1{
+	font-size: 20px;
+	font-family: 'Moul', cursive;
+	line-height: 60px;
+	margin-left: 20px;
+	color: #00d4b4;
+}
+.charity .charity-detail{
+	width: 100%;
+	height: 200px;
+	/*background-color: red;*/
+	padding: 20px;
+	padding-top: 0;
+}
+.charity .charity-detail p{
+	font-size: 18px;
+}
+.charity .charity-image{
+	width: 96%;
+	/*height: 100%;*/
+	margin: 10px;
+	background-color: #c69500;
+	text-align: center;
+	margin-left: 2%;
+	margin-bottom: 10px;
+}
+.charity-image img{
+	width: 100%;
+	height: 100%;
 }

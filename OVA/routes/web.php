@@ -14,9 +14,17 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/',[HomeController::class,'Index'])->name('/');
 Route::get('header',[HomeController::class,'Header'])->name('header');
-Route::get('index',[HomeController::class,'Index'])->name('index');
 Route::get('footer',[HomeController::class,'Footer'])->name('footer');
+Route::get('director',[HomeController::class,'Director'])->name('director');
+Route::get('mission',[HomeController::class,'Mission'])->name('mission');
+Route::get('vision',[HomeController::class,'Vision'])->name('vision');
+Route::get('structure',[HomeController::class,'Structure'])->name('structure');
+Route::get('activity',[HomeController::class,'Activity'])->name('activity');
+Route::get('page-detail',[HomeController::class,'Page_Detail'])->name('page-detail');
+Route::get('charity',[HomeController::class,'Charity'])->name('charity');
