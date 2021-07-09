@@ -36,4 +36,7 @@ class HomeController extends Controller
     function Charity(){
         return view('Auth/charity');
     }
+    function Contact(){
+        return view('Auth/contact');
+    }
 }

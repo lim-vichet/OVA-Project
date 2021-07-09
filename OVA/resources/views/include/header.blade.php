@@ -30,7 +30,7 @@
                     </li>
                     <li><a href="{{route('activity')}}">សកម្មភាព</a></li>
                     <li><a href="{{route('charity')}}">សប្បុរសធម៍</a></li>
-                    <li><a href="#">ទំនាក់ទំនង</a></li>
+                    <li><a href="{{route('contact')}}">ទំនាក់ទំនង</a></li>
                 </ul>
             </div>
             <div class="search">

@@ -28,3 +28,4 @@ Route::get('structure',[HomeController::class,'Structure'])->name('structure');
 Route::get('activity',[HomeController::class,'Activity'])->name('activity');
 Route::get('page-detail',[HomeController::class,'Page_Detail'])->name('page-detail');
 Route::get('charity',[HomeController::class,'Charity'])->name('charity');
+Route::get('contact',[HomeController::class,'Contact'])->name('contact');

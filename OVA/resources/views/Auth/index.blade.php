@@ -8,7 +8,7 @@
                 </div>
                 <div class="row box-body-item">
                     <div class=" box-item col-xl-3" >
-                        <a href="#" style="text-decoration: none;">
+                        <a href="{{route('page-detail')}}" style="text-decoration: none;">
                             <div class="image-box">
                                 <img src="{{asset('img/par5.jpg')}}" alt="">
                             </div>
