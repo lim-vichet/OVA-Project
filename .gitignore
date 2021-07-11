@@ -6,3 +6,4 @@
 composer.json
 composer.lock
 package.json
+.DS_Store
