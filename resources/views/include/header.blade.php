@@ -18,19 +18,20 @@
         <div class="col-xl-12">
             <div class="menu">
                 <ul>
-                    <li><a href="#">ទំព័រដើម</a></li>
+
+                    <li><a href="{{route('/')}}">ទំព័រដើម</a></li>
                     <li>
                         <a href="#">អំពីសហគមន៍</a>
                         <ul>
-                            <li><a href="#">នាយកសហគមន៍</a></li>
-                            <li><a href="#">បេសកកម្ម</a></li>
-                            <li><a href="#">ចក្ខុវិស័យ</a></li>
-                            <li><a href="#">រចនាសម្ព័័ន្ធ</a></li>
+                            <li><a href="{{route('director')}}">នាយកសហគមន៍</a></li>
+                            <li><a href="{{route('mission')}}">បេសកកម្ម</a></li>
+                            <li><a href="{{route('vision')}}">ចក្ខុវិស័យ</a></li>
+                            <li><a href="{{route('structure')}}">រចនាសម្ព័័ន្ធ</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">សកម្មភាព</a></li>
-                    <li><a href="#">សប្បុរសធម៍</a></li>
-                    <li><a href="#">ទំនាក់ទំនង</a></li>
+                    <li><a href="{{route('activity')}}">សកម្មភាព</a></li>
+                    <li><a href="{{route('charity')}}">សប្បុរសធម៍</a></li>
+                    <li><a href="{{route('contact')}}">ទំនាក់ទំនង</a></li>
                 </ul>
             </div>
             <div class="search">
@@ -51,13 +52,14 @@
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
                                 <div class="slide">
-                                    <img src="{{asset('img/1.jpg')}}">
+
+                                    <img src="{{asset('img/par4.jpg')}}">
                                 </div>
                                 <div class="slide">
-                                    <img src="{{asset('img/2.jpg')}}">
+                                    <img src="{{asset('img/par5.jpg')}}">
                                 </div>
                                 <div class="slide">
-                                    <img src="{{asset('img/3.jpg')}}">
+                                    <img src="{{asset('img/par6.jpg')}}">
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 pr-xl-0 pl-xl-1">

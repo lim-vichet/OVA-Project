@@ -20,8 +20,9 @@
     @section('body')
     @show
     <script src="{{asset('js/js.js')}}"></script>
+    @include('include.footer')
     @section('script')
-    @show
+        @show
 
 </body>
 </html>
