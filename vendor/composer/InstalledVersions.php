@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '51c1173f40c2bf74d3eb32717ba163b11299701b',
+    'reference' => 'f0e52dab9a0d88f501a60f6733de0c1bfe40da3f',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -439,7 +439,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '51c1173f40c2bf74d3eb32717ba163b11299701b',
+      'reference' => 'f0e52dab9a0d88f501a60f6733de0c1bfe40da3f',
     ),
     'laravel/tinker' => 
     array (
@@ -660,6 +660,16 @@ private static $installed = array (
       array (
       ),
       'reference' => 'fb9b8333f14e3dce976a60ef6a7e05c7c7ed8bfb',
+    ),
+    'piseth/storagehelper' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => 'b4e5ebddd95aeeab5e52f331bc0aac17d08a5ed1',
     ),
     'psr/container' => 
     array (
@@ -1264,6 +1274,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
+    ),
+    'yajra/laravel-datatables-oracle' => 
+    array (
+      'pretty_version' => 'v9.18.1',
+      'version' => '9.18.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7148225d52bcdfdd77c24e8d456058f1150b84e7',
     ),
   ),
 );
