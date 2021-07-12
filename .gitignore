@@ -1,0 +1,10 @@
+/node_modules
+/vendor
+.idea/
+/.idea
+/tests
+composer.json
+composer.lock
+package.json
+.DS_Store
+/.DS_Store
