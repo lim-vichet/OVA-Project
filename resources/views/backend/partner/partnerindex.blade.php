@@ -13,10 +13,10 @@
                     {{csrf_field()}}
                     <div class="row">
                         <label for="txtPartnerName">Partner name</label>
-                        <input class="form-control mb-2" type="text" name="txtPartnerName" placeholder="Partner name">
+                        <input class="form-control mb-2" type="text" id="txtPartnerName" name="txtPartnerName" placeholder="Partner name">
 
                         <label for="txtPartnerLogo">Partner logo</label>
-                        <input type="file" class="form-control" accept=".png,.jpg,.jpeg" name="txtPartnerLogo">
+                        <input type="file" class="form-control" id="txtPartnerLogo" accept=".png,.jpg,.jpeg" name="txtPartnerLogo">
                         <div class="col-xl-12 p-0">
                             <input type="button" id="btnSave" class="btn btn-primary mt-2" value="Save">
                         </div>

@@ -21,6 +21,13 @@
         @show
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
 
+    <!-- summernote -->
+    <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     {{--    <script src="{{asset('boostrap/bootstrap.min.js')}}"></script>--}}
 </head>
@@ -110,14 +117,15 @@
                                     <li><a href="profile.html">Profile</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
+                            <li>
+                                <a>
+                                    <i class="fa fa-windows"></i> អំពីសមាគមន៍ <span class="fa fa-chevron-down"></span>
+                                </a>
                                 <ul class="nav child_menu">
-                                    <li><a href="page_403.html">403 Error</a></li>
-                                    <li><a href="page_404.html">404 Error</a></li>
-                                    <li><a href="page_500.html">500 Error</a></li>
-                                    <li><a href="plain_page.html">Plain Page</a></li>
-                                    <li><a href="login.html">Login Page</a></li>
-                                    <li><a href="pricing_tables.html">Pricing Tables</a></li>
+                                    <li><a href="{{route('director.index')}}">នាយកសមាគមន៍</a></li>
+                                    <li><a href="{{route('mission.index')}}">បេសកកម្ម</a></li>
+                                    <li><a href="page_500.html">ចក្ខុវិស័យ</a></li>
+                                    <li><a href="plain_page.html">រចនាសម្ព័ន្ធ</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
@@ -137,7 +145,8 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
+                            <li><a href="{{route('partner.index')}}"><i class="fa fa-laptop"></i> ដៃគូនឹងម្ចាស់ជំនួយ</a></li>
+{{--                            <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>--}}
                         </ul>
                     </div>
 
@@ -264,6 +273,8 @@
 <!-- Custom Theme Scripts -->
 <script src="{{asset('backend/build/js/custom.min.js')}}"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<!-- Summernote -->
+<script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
 @section('script')
     @show
 </body>

@@ -1,4 +1,6 @@
 {
+    "/backend/js/director/director.js": "/backend/js/director/director.js",
+    "/backend/js/mission/mission.js": "/backend/js/mission/mission.js",
     "/backend/js/partner/partner.js": "/backend/js/partner/partner.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css"

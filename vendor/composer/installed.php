@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'ecc13c8586694dc7e6559efb70026053009e18ce',
+    'reference' => '7e21288922f4f40ccf8be39c61bfa0ca51ebb7f8',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -99,12 +99,12 @@
     ),
     'facade/ignition' => 
     array (
-      'pretty_version' => '2.10.2',
-      'version' => '2.10.2.0',
+      'pretty_version' => '2.11.0',
+      'version' => '2.11.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '43688227bbf27c43bc1ad83af224f135b6ef0ff4',
+      'reference' => 'dc6818335f50ccf0b90284784718ea9a82604286',
     ),
     'facade/ignition-contracts' => 
     array (
@@ -117,12 +117,12 @@
     ),
     'fakerphp/faker' => 
     array (
-      'pretty_version' => 'v1.14.1',
-      'version' => '1.14.1.0',
+      'pretty_version' => 'v1.15.0',
+      'version' => '1.15.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1',
+      'reference' => '89c6201c74db25fa759ff16e78a4d8f32547770e',
     ),
     'fideloper/proxy' => 
     array (
@@ -135,12 +135,12 @@
     ),
     'filp/whoops' => 
     array (
-      'pretty_version' => '2.13.0',
-      'version' => '2.13.0.0',
+      'pretty_version' => '2.14.0',
+      'version' => '2.14.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2edbc73a4687d9085c8f20f398eebade844e8424',
+      'reference' => 'fdf92f03e150ed84d5967a833ae93abffac0315b',
     ),
     'fruitcake/laravel-cors' => 
     array (
@@ -413,7 +413,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'ecc13c8586694dc7e6559efb70026053009e18ce',
+      'reference' => '7e21288922f4f40ccf8be39c61bfa0ca51ebb7f8',
     ),
     'laravel/tinker' => 
     array (
@@ -643,7 +643,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'b4e5ebddd95aeeab5e52f331bc0aac17d08a5ed1',
+      'reference' => '732b4a125794640359b3c22b6b23024739e70c98',
     ),
     'psr/container' => 
     array (

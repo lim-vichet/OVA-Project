@@ -96,21 +96,45 @@
 // Dependency Element
 var xhr = new XMLHttpRequest();
 var frmPartner = document.getElementById('frmPartner');
-var btnSave = document.getElementById('btnSave'); // Dependency Variable
+var btnSave = document.getElementById('btnSave');
+var txtPartnerName = document.getElementById('txtPartnerName');
+var txtPartnerLogo = document.getElementById('txtPartnerLogo'); // Dependency Variable
 
-var tableId = 'partnerTable'; // Dependency URL
+var tableId = 'partnerTable';
+var NeworUpdate = 0; // 0 = New and 1 = Update
+
+var PartnerId = null; // Dependency URL
 
 var urlCreate = "".concat(window.origin, "/backend/partner/store");
 var urlDisable = "".concat(window.origin, "/backend/partner/disable");
+var urlEdit = "".concat(window.origin, "/backend/partner/edit");
+var urlUpdate = "".concat(window.origin, "/backend/partner/update");
 btnSave.addEventListener('click', function (e) {
   var frmData = new FormData(frmPartner);
-  xhr.open('post', urlCreate, true);
 
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      reloadDataTabel(tableId);
-    }
-  };
+  if (NeworUpdate === 0) {
+    xhr.open('post', urlCreate, true);
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        reloadDataTabel(tableId);
+        txtPartnerName.value = "";
+        txtPartnerLogo.filename = "";
+      }
+    };
+  } else if (NeworUpdate === 1) {
+    xhr.open('post', "".concat(urlUpdate, "/").concat(PartnerId));
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        reloadDataTabel(tableId);
+        NeworUpdate = 0;
+        PartnerId = null;
+        txtPartnerName.value = "";
+        txtPartnerLogo.filename = "";
+      }
+    };
+  }
 
   xhr.send(frmData);
 });
@@ -120,6 +144,21 @@ $(document).on('click', '#btnDisable', function () {
   xhr.onload = function () {
     if (xhr.status === 200) {
       reloadDataTabel(tableId);
+    }
+  };
+
+  xhr.send();
+});
+$(document).on('click', '#btnEdit', function () {
+  PartnerId = $(this).attr('data-id');
+  xhr.open('get', "".concat(urlEdit, "/").concat(PartnerId));
+
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      var data = JSON.parse(xhr.responseText);
+      txtPartnerName.value = data.name;
+      txtPartnerLogo.filename = data.logo;
+      NeworUpdate = 1;
     }
   };
 
