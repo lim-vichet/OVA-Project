@@ -93,7 +93,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 slide-news-box">
                         <div class="row">
-                            <div class="col-xl-8 col-lg-8 col-md-8 col slide-box">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 slide-box">
                                 <div class="btn-slide btn-back">
                                     <i class="fas fa-arrow-left"></i>
                                 </div>
@@ -101,7 +101,6 @@
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
                                 <div class="slide">
-
                                     <img src="{{asset('img/par4.jpg')}}">
                                 </div>
                                 <div class="slide">
@@ -111,7 +110,7 @@
                                     <img src="{{asset('img/par6.jpg')}}">
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4 news">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 news" >
                                 <div class="news-box1">
                                     <h1>Featured Causes</h1>
                                     <h2><</h2>
@@ -133,15 +132,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-12">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 video">
                         <div class="row">
-                            <div class="col-xl-4 col-lg-4 video1" >
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 video1" >
                                 <a href="#">
                                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xmyTtW2kcR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </a>
                             </div>
-                            <div class="col-xl-8 col-lg-8 pr-xl-0 pl-xl-1">
-                                <div class="col-xl-12 video2">
+                            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 video2">
                                     <div class="new-slide-box">
                                         <div class="new-btn-slide new-btn-back">
                                             <i class="fas fa-arrow-left"></i>
@@ -165,7 +163,6 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>

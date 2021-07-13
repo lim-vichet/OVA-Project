@@ -2,7 +2,7 @@
 @section('body')
     <div class="container mission">
         <div class="row">
-            <div class="col-xl-12">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="mission-header">
                     <h1>បេសកកម្ម</h1>
                 </div>

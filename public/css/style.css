@@ -212,7 +212,7 @@ form.example::after {
 }
 .slide-news-box{
 	width: 100%;
-	height: 300px;
+	/*height: 300px;*/
     padding: 0;
     margin: 0;
 
@@ -343,7 +343,6 @@ form.example::after {
 	margin-left: 10px;
 	float: left;
     color: white;
-
 }
 .news .news-box1 h2{
 	font-size: 18px;
@@ -413,24 +412,30 @@ form.example::after {
     opacity: 0.8;
 }
 /*video*/
+.video{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
 .video1{
 	background: blue;
 	padding: 0;
 	margin: 0;
 	margin-top: 3px;
-	height: 240px;
+	height: 250px;
 }
 .video1 .iframe{
 	width: 100%;
 	height: 100%;
 }
 .video2{
-	background: deeppink;
 	padding: 0;
 	margin: 0;
 	margin-top: 3px;
-	height: 240px;
-	/*height: 100%;*/
+	height: 250px;
+	width: 10%;
+	padding-left: 5px;
 }
 .new-slide-box{
 	width: 100%;
@@ -663,12 +668,12 @@ form.example::after {
 }
 .last-footer{
 	width: 100%;
-	height: 45px;
 	background-color: #0c5460;
 	margin-top: 5px;
 	padding: 0;
 	/*margin: 0;*/
 	box-shadow: 1px 2px 10px 0 grey;
+	margin-bottom: 90px;
 }
 .last-footer h1{
 	font-size: 16px;
@@ -710,10 +715,18 @@ form.example::after {
 	height: 100%;
 	/*background-color: #c69500;*/
 	float: left;
+    margin-top: 10px;
 }
-.letter-box p{
-	margin: 25px;
+.letter-box p1{
+	margin: 18px;
 	font-size: 18px;
+    line-height: 28px;
+
+}
+.letter-box p2{
+    padding-top: 60px;
+    margin-bottom: 0;
+    font-size: 16px;
 }
 
 .director-detail .profile-box{
@@ -755,7 +768,7 @@ form.example::after {
 }
 .mission .mission-detail{
 	width: 100%;
-	height: 200px;
+	/*height: 200px;*/
 	/*background-color: red;*/
 	padding: 20px;
 	padding-top: 0;
@@ -765,7 +778,7 @@ form.example::after {
 }
 .mission .mission-image{
 	width: 80%;
-	height: 250px;
+	/*height: 250px;*/
 	margin: 10px;
 	background-color: #c69500;
 	text-align: center;
@@ -800,7 +813,7 @@ form.example::after {
 }
 .vision .vision-detail{
 	width: 100%;
-	height: 200px;
+	/*height: 200px;*/
 	/*background-color: red;*/
 	padding: 20px;
 	padding-top: 0;
@@ -810,7 +823,7 @@ form.example::after {
 }
 .vision .vision-image{
 	width: 80%;
-	height: 250px;
+	/*height: 250px;*/
 	margin: 10px;
 	background-color: #c69500;
 	text-align: center;
@@ -891,7 +904,7 @@ form.example::after {
 }
 .page-detail .page-detail-detail{
 	width: 100%;
-	height: 200px;
+
 	/*background-color: red;*/
 	padding: 20px;
 	padding-top: 0;
@@ -937,7 +950,6 @@ form.example::after {
 }
 .charity .charity-detail{
 	width: 100%;
-	height: 200px;
 	/*background-color: red;*/
 	padding: 20px;
 	padding-top: 0;
@@ -960,17 +972,15 @@ form.example::after {
 }
 /*contact*/
 .contact{
-	width: 100%;
-	height: auto;
+
 	padding: 0px;
 	margin: auto;
-	/*background-color: #00d4b4;*/
 	margin-top: 5px;
 	overflow: hidden;
 	box-shadow: 1px 2px 10px 0 grey;
 }
 .contact .location-box{
-	width: 60%;
+	width: 100%;
 	height: 100%;
 	float: left;
 	padding: 0px;
@@ -978,8 +988,8 @@ form.example::after {
 	overflow: hidden;
 }
 .contact .location-box .location-image{
-	width: 90%;
-	height: 300px;
+	width: 92%;
+	/*height: 300px;*/
 	background-color: red;
 	margin: 5%;
 	box-shadow: 1px 2px 10px 0 grey;
@@ -989,7 +999,7 @@ form.example::after {
 	height: 100%;
 }
 .contact .contact-box{
-	width: 40%;
+	width: 100%;
 	height: 100%;
 	/*background-color: #00d4b4;*/
 	float: left;
@@ -997,20 +1007,16 @@ form.example::after {
 }
 .contact-box .contact-item-box{
 	width: 90%;
-	height: 500px;
-	/*background-color: #1c7430;*/
-	margin: 3%;
+	margin: 5% 3% 3% 3% ;
 	box-shadow: 1px 2px 10px 0 grey;
 	padding: 20px;
-
 }
 .contact-item-box .contact-item{
 	width: 100%;
-	height: 100px;
-	/*background-color: #00d4b4;*/
+	height: 85px;
 }
 .contact-item h1{
-	font-size: 25px;
+	font-size: 20px;
 	font-family: 'Moul', cursive;
 }
 .contact-item p{
@@ -1025,7 +1031,7 @@ form.example::after {
 	float: left;
 }
 .icon-box i{
-	font-size: 40px;
+	font-size: 35px;
 }
 
 /*===============add media================*/
@@ -1036,6 +1042,23 @@ form.example::after {
 }
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .letter-box p1{
+        margin: 18px;
+        font-size: 16px;
+        line-height: 8px;
+        padding-right: 25px;
+    }
+    .letter-box p2{
+        font-size: 15px;
+    }
+	.contact-item h1{
+		font-size: 18px;
+		font-family: 'Moul', cursive;
+	}
+	.icon-box i{
+		font-size: 30px;
+	}
+
 
 }
 /*Medium devices (tablets, 768px and up)*/
@@ -1051,6 +1074,59 @@ form.example::after {
     .news .news-box1 h2{
         margin-left: 45px;
     }
+	.news-box2 .news-title .read-more{
+		bottom: 0.001%;
+		left: 30%;
+		transform: translate(0,-50%);
+	}
+	.video1{
+		height: 370px;
+	}
+	.video2{
+		height: 370px;
+	}
+	.box-body .box-body-item .box-item{
+		width: 100%;
+		height: 200px;
+		/*background-color: #9fcdff;*/
+		margin: 0;
+		padding: 5px;
+	}
+	.box-body .box-body-item .box-item{
+		width: 100%;
+		height: 250px;
+		/*background-color: #9fcdff;*/
+		margin: 0;
+		padding: 5px;
+	}
+    .footer-item .location{
+        height: 150px;
+    }
+    .letter-box p1{
+        margin: 16px;
+        font-size: 16px;
+        line-height: 3px;
+    }
+    .letter-box p2{
+        font-size: 15px;
+    }
+    .director-detail .profile-box{
+        width: 30%;
+        height: 40%;
+        padding: 10px;
+    }
+	.vision .vision-detail{
+		margin-top: 10px;
+	}
+	.page-detail .page-detail-detail p{
+		font-size: 16px;
+	}
+	.charity .charity-detail p{
+		font-size: 16px;
+	}
+	.contact-box{
+		margin-top: -17px;
+	}
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -1069,6 +1145,73 @@ form.example::after {
         font-size: 20px;
         padding: 10px 0px;
     }
+	.news{
+		margin-top: 5px;
+	}
+	.news .news-box1 h1{
+		margin-left: 30px;
+	}
+	.news .news-box1 h2{
+		line-height: 50px;
+		margin-left: 310px;
+	}
+	.news-box2 .news-title h1{
+		margin-left: 30px;
+		font-size: 17px;
+	}
+	.news-box2 .news-title h2{
+		font-size: 15px;
+		margin-left: 30px;
+		padding-right: 20px;
+	}
+    .footer-item .location{
+        height: 100px;
+    }
+    .letter-box p1{
+        margin: 16px;
+        font-size: 12px;
+        line-height: 3px;
+    }
+    .director-detail .profile-box{
+        width: 30%;
+        height: 30%;
+        padding: 10px;
+        margin-top: 5px;
+    }
+    .mission .mission-detail p{
+        font-size: 16px;
+    }
+	.vision .vision-detail{
+		margin-top: 10px;
+	}
+	.vision .vision-detail p{
+		font-size: 16px;
+	}
+	.page-detail .page-detail-detail p{
+		font-size: 16px;
+	}
+	.charity .charity-detail p{
+		font-size: 16px;
+	}
+	.contact-box{
+		margin-top: -17px;
+	}
+	.contact-box .contact-item-box{
+		width: 98%;
+		box-shadow: 1px 2px 10px 0 grey;
+		padding: 20px;
+	}
+	.contact-item h1{
+		font-size: 16px;
+		font-family: 'Moul', cursive;
+	}
+	.contact-item p {
+		font-size: 14px;
+	}
+	.icon-box i{
+		font-size: 25px;
+	}
+
 }
 
 /*Extra small devices (portrait phones, less than 576px)*/
@@ -1107,5 +1250,101 @@ form.example::after {
         font-size: 20px;
         padding: 10px 0px;
     }
+	.news .news-box1 h1{
+		margin-left: 30px;
+	}
+	.news .news-box1 h2{
+		line-height: 50px;
+		margin-left: 280px;
+	}
+	.news{
+		margin-top: 5px;
+	}
+
+	.news-box2 .news-title h1{
+		margin-left: 30px;
+		font-size: 17px;
+	}
+	.news-box2 .news-title h2{
+		font-size: 15px;
+		margin-left: 30px;
+		padding-right: 10px;
+	}
+    .footer-item .location{
+        height: 80px;
+    }
+	.last-footer{
+		/*height: 200px;*/
+	}
+	.last-footer h1{
+		font-size: 12px;
+		line-height: 30px;
+	}
+    .letter-box p1{
+        margin: 16px;
+        font-size: 12px;
+        line-height: 3px;
+    }
+    .letter-box p2{
+        font-size: 12px;
+    }
+    .director-detail .profile-box{
+        width: 30%;
+        height: 20%;
+        padding: 10px;
+        margin-top: 5px;
+    }
+    .mission .mission-detail p{
+        font-size: 15px;
+    }
+	.vision .vision-detail{
+		margin-top: 10px;
+	}
+	.vision .vision-detail p{
+		font-size: 15px;
+	}
+	.page-detail .page-detail-detail p{
+		font-size: 15px;
+	}
+	.charity .charity-detail p{
+		font-size: 15px;
+	}
+	.contact-box{
+		margin-top: -17px;
+	}
+	.contact-box .contact-item-box{
+		width: 98%;
+		box-shadow: 1px 2px 10px 0 grey;
+		padding: 20px;
+	}
+	.contact-item h1{
+		font-size: 16px;
+		font-family: 'Moul', cursive;
+	}
+	.contact-item p {
+		font-size: 14px;
+	}
+	.icon-box i{
+		font-size: 25px;
+	}
+	.contact-box{
+		margin-top: -17px;
+	}
+	.contact-box .contact-item-box{
+		width: 98%;
+		box-shadow: 1px 2px 10px 0 grey;
+		padding: 20px;
+	}
+	.contact-item h1{
+		font-size: 13px;
+		font-family: 'Moul', cursive;
+	}
+	.contact-item p {
+		font-size: 13px;
+	}
+	.icon-box i{
+		font-size: 20px;
+	}
+
 
 }
