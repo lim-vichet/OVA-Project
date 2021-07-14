@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\DirectorController;
 use App\Http\Controllers\Backend\MissionController;
 use App\Http\Controllers\Backend\VisionController;
 use App\Http\Controllers\Backend\StructureController;
+use App\Http\Controllers\Backend\ActivityController;
 
 Route::group(['prefix'=>'backend'], function (){
     Route::get('login', [AuthController::class, 'index'])->name('login');
@@ -23,6 +24,15 @@ Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
         Route::get('/disable/{id}', [PartnerController::class, 'destroy'])->name('partner.destroy');
         Route::get('/edit/{id}', [PartnerController::class, 'show'])->name('partner.show');
         Route::post('/update/{id}', [PartnerController::class, 'update'])->name('partner.update');
+    });
+
+    Route::group(['prefix'=>'activity'], function (){
+        Route::get('/', [ActivityController::class, 'index'])->name('activity.index');
+        Route::get('/ajax-table', [ActivityController::class, 'partnerAjaxTable'])->name('activity.ajaxtable');
+        Route::post('/store', [ActivityController::class, 'store'])->name('activity.store');
+        Route::get('/disable/{id}', [ActivityController::class, 'destroy'])->name('activity.destroy');
+        Route::get('/edit/{id}', [ActivityController::class, 'show'])->name('activity.show');
+        Route::post('/update/{id}', [ActivityController::class, 'update'])->name('activity.update');
     });
 
     Route::group(['prefix'=>'director'], function (){

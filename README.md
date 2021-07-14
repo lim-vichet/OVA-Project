@@ -7,3 +7,4 @@
 ## 14-07-2021
 - Vision data entry
 - Structure data entry
+- Activity data entry

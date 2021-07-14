@@ -17,4 +17,6 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/backend/mission/mission.js', 'public/backend/js/mission')
     .js('resources/js/backend/vision/vision.js', 'public/backend/js/vision')
     .js('resources/js/backend/structure/structure.js', 'public/backend/js/structure')
-    .sass('resources/sass/app.scss', 'public/css');
+    .js('resources/js/backend/activity/activity.js', 'public/backend/js/activity')
+    .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/backend/activity/activitycss.scss', 'public/backend/css/activity');

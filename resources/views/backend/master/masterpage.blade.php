@@ -117,6 +117,7 @@
                                     <li><a href="profile.html">Profile</a></li>
                                 </ul>
                             </li>
+                            <li><a href="{{route('activity.index')}}"><i class="fa fa-laptop"></i>សកម្មភាព</a></li>
                             <li>
                                 <a>
                                     <i class="fa fa-windows"></i> អំពីសមាគមន៍ <span class="fa fa-chevron-down"></span>
@@ -145,7 +146,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="{{route('partner.index')}}"><i class="fa fa-laptop"></i> ដៃគូនឹងម្ចាស់ជំនួយ</a></li>
+                            <li><a href="{{route('partner.index')}}"><i class="fa fa-laptop"></i>ដៃគូនឹងម្ចាស់ជំនួយ</a></li>
 {{--                            <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>--}}
                         </ul>
                     </div>
