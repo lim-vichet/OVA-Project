@@ -124,8 +124,8 @@
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('director.index')}}">នាយកសមាគមន៍</a></li>
                                     <li><a href="{{route('mission.index')}}">បេសកកម្ម</a></li>
-                                    <li><a href="page_500.html">ចក្ខុវិស័យ</a></li>
-                                    <li><a href="plain_page.html">រចនាសម្ព័ន្ធ</a></li>
+                                    <li><a href="{{route('vision.index')}}">ចក្ខុវិស័យ</a></li>
+                                    <li><a href="{{route('structure.index')}}">រចនាសម្ព័ន្ធ</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>

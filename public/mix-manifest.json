@@ -2,6 +2,8 @@
     "/backend/js/director/director.js": "/backend/js/director/director.js",
     "/backend/js/mission/mission.js": "/backend/js/mission/mission.js",
     "/backend/js/partner/partner.js": "/backend/js/partner/partner.js",
+    "/backend/js/structure/structure.js": "/backend/js/structure/structure.js",
+    "/backend/js/vision/vision.js": "/backend/js/vision/vision.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css"
 }

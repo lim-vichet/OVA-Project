@@ -3,6 +3,8 @@ use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Backend\DirectorController;
 use App\Http\Controllers\Backend\MissionController;
+use App\Http\Controllers\Backend\VisionController;
+use App\Http\Controllers\Backend\StructureController;
 
 Route::group(['prefix'=>'backend'], function (){
     Route::get('login', [AuthController::class, 'index'])->name('login');
@@ -31,5 +33,15 @@ Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
     Route::group(['prefix'=>'mission'], function (){
         Route::get('/', [MissionController::class, 'index'])->name('mission.index');
         Route::post('/store', [MissionController::class, 'store'])->name('mission.store');
+    });
+
+    Route::group(['prefix'=>'vision'], function (){
+        Route::get('/', [VisionController::class, 'index'])->name('vision.index');
+        Route::post('/store', [VisionController::class, 'store'])->name('vision.store');
+    });
+
+    Route::group(['prefix'=>'structure'], function (){
+        Route::get('/', [StructureController::class, 'index'])->name('structure.index');
+        Route::post('/store', [StructureController::class, 'store'])->name('structure.store');
     });
 });
