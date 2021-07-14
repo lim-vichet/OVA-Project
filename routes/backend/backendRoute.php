@@ -3,6 +3,7 @@ use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Backend\DirectorController;
 use App\Http\Controllers\Backend\MissionController;
+use App\Http\Controllers\Backend\LogoController;
 
 Route::group(['prefix'=>'backend'], function (){
     Route::get('login', [AuthController::class, 'index'])->name('login');
@@ -31,5 +32,9 @@ Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
     Route::group(['prefix'=>'mission'], function (){
         Route::get('/', [MissionController::class, 'index'])->name('mission.index');
         Route::post('/store', [MissionController::class, 'store'])->name('mission.store');
+    });
+    Route::group(['prefix'=>'logo'], function (){
+        Route::get('/',[LogoController::class, 'index'])->name('logo.index');
+
     });
 });
