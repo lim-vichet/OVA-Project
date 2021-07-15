@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Backend\DirectorController;
 use App\Http\Controllers\Backend\MissionController;
 use App\Http\Controllers\Backend\LogoController;
+use App\Http\Controllers\Backend\CharityController;
 
 Route::group(['prefix'=>'backend'], function (){
     Route::get('login', [AuthController::class, 'index'])->name('login');
@@ -35,6 +36,12 @@ Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
     });
     Route::group(['prefix'=>'logo'], function (){
         Route::get('/',[LogoController::class, 'index'])->name('logo.index');
-
+        Route::get('logo',[LogoController::class,'Logo'])->name('logo');
+        Route::post('logo_insert',[LogoController::class,'Logo_Insert'])->name('logo_insert');
     });
+
+    Route::group(['prefix'=>'charity'], function (){
+        \Illuminate\Routing\Route::
+    });
+
 });
