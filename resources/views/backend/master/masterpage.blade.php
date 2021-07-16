@@ -147,7 +147,8 @@
                             </li>
                             <li><a href="{{route('partner.index')}}"><i class="fa fa-laptop"></i> ដៃគូនឹងម្ចាស់ជំនួយ</a></li>
                             <li><a href="{{route('logo.index')}}"><i class="fa fa-laptop"></i>ឈ្មោះនិងរូបភាពឡូហ្គូ</a></li>
-                            <li><a href="{{route('logo.index')}}"><i class="fa fa-laptop"></i>សប្បុរសធម៍</a></li>
+                            <li><a href="{{route('charity.index')}}"><i class="fa fa-laptop"></i>សប្បុរសធម៍</a></li>
+                            <li><a href="{{route('contact.index')}}"><i class="fa fa-laptop"></i>ទំនាក់ទំនង</a></li>
 
 {{--                            <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>--}}
                         </ul>

@@ -40,9 +40,8 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="address-box">
-                                <p style="font-weight: bold">លេខទូរស័ព្ទ</p>
-                                <p>(+855) 93 999 111</p>
-                                <p>(+855) 23 999 033</p>
+                                <p style="font-weight: bold">អ៊ីម៉ែល</p>
+                                <p>kiki@gmail.com</p>
                             </div>
                         </div>
                     </div>

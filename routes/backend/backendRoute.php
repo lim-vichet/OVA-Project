@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\DirectorController;
 use App\Http\Controllers\Backend\MissionController;
 use App\Http\Controllers\Backend\LogoController;
 use App\Http\Controllers\Backend\CharityController;
+use App\Http\Controllers\Backend\ContactController;
 
 Route::group(['prefix'=>'backend'], function (){
     Route::get('login', [AuthController::class, 'index'])->name('login');
@@ -41,7 +42,14 @@ Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
     });
 
     Route::group(['prefix'=>'charity'], function (){
-        \Illuminate\Routing\Route::
+        Route::get('/',[CharityController::class,'index'])->name('charity.index');
+        Route::get('show',[CharityController::class,'Show_detail'])->name('show');
+        Route::post('charity_insert',[CharityController::class,'insert'])->name('charity_insert');
+    });
+    Route::group(['prefix'=>'contact'], function (){
+        Route::get('/',[ContactController::class,'index'])->name('contact.index');
+        Route::get('ajax-table',[ContactController::class,'ContactAjaxTable'])->name('contact.ajaxtable');
+        Route::post('contact_insert',[ContactController::class,'insert'])->name('contact_insert');
     });
 
 });
