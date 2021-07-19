@@ -81,46 +81,113 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/backend/mission/mission.js":
+/***/ "./resources/js/backend/contact/contact.js":
 /*!*************************************************!*\
-  !*** ./resources/js/backend/mission/mission.js ***!
+  !*** ./resources/js/backend/contact/contact.js ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 // Dependency Element
+var xhr = new XMLHttpRequest();
+var frmContact = document.getElementById('frmContact');
 var btnSave = document.getElementById('btnSave');
-var frmMission = document.getElementById('frmMission'); // Dependency Variable
+var address = document.getElementById('address');
+var phone = document.getElementById('phone');
+var email = document.getElementById('email');
+var img = document.getElementById('img'); // Dependency Variable
 
-var xhr = new XMLHttpRequest(); // Dependency URL
+var tableId = 'contactTable';
+var NeworUpdate = 0; // 0 = New and 1 = Update
 
-var urlCreate = "".concat(window.origin, "/backend/mission/store");
-btnSave.addEventListener('click', function () {
-  var frmData = new FormData(frmMission);
-  xhr.open('post', "".concat(urlCreate), true);
+var PartnerId = null; // Dependency URL
 
-  xhr.onload = function () {
-    if (xhr.status === 200) {}
-  };
+var urlCreate = "".concat(window.origin, "/backend/contact/contact_insert");
+var urlDisable = "".concat(window.origin, "/backend/contact/destroy");
+var urlEdit = "".concat(window.origin, "/backend/contact/edit");
+var urlUpdate = "".concat(window.origin, "/backend/contact/update");
+btnSave.addEventListener('click', function (e) {
+  var frmData = new FormData(frmContact);
+
+  if (NeworUpdate === 0) {
+    xhr.open('post', urlCreate, true);
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        reloadDataTabel(tableId);
+        address.value = "";
+        phone.value = "";
+        email.value = "";
+        img.filename = "";
+      }
+    };
+  } else if (NeworUpdate === 1) {
+    xhr.open('post', "".concat(urlUpdate, "/").concat(ContactId));
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        reloadDataTabel(tableId);
+        NeworUpdate = 0;
+        ContactId = null;
+        address.value = "";
+        phone.value = "";
+        email.value = "";
+        img.filename = "";
+      }
+    };
+  }
 
   xhr.send(frmData);
 });
+$(document).on('click', '#btnDisable', function () {
+  xhr.open('get', "".concat(urlDisable, "/").concat($(this).attr('data-id')));
+
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      reloadDataTabel(tableId);
+    }
+  };
+
+  xhr.send();
+});
+$(document).on('click', '#btnEdit', function () {
+  ContactId = $(this).attr('data-id');
+  xhr.open('get', "".concat(urlEdit, "/").concat(ContactId));
+
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      var data = JSON.parse(xhr.responseText);
+      address.value = data.address;
+      phone.value = data.phone;
+      email.value = data.email;
+      img.filename = data.img;
+      NeworUpdate = 1;
+    }
+  };
+
+  xhr.send();
+});
+
+function reloadDataTabel(tableId) {
+  var tableIdl = "#" + tableId;
+  $(tableIdl).DataTable().ajax.reload();
+}
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*******************************************************!*\
-  !*** multi ./resources/js/backend/mission/mission.js ***!
+  !*** multi ./resources/js/backend/contact/contact.js ***!
   \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\phen\Desktop\Project-OVA\resources\js\backend\mission\mission.js */"./resources/js/backend/mission/mission.js");
+module.exports = __webpack_require__(/*! C:\Users\phen\Desktop\Project-OVA\resources\js\backend\contact\contact.js */"./resources/js/backend/contact/contact.js");
 
 
 /***/ })

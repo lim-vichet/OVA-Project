@@ -179,7 +179,7 @@ function reloadDataTabel(tableId) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/DATA/do/Laravel/OT/ova project/ova/resources/js/backend/partner/partner.js */"./resources/js/backend/partner/partner.js");
+module.exports = __webpack_require__(/*! C:\Users\phen\Desktop\Project-OVA\resources\js\backend\partner\partner.js */"./resources/js/backend/partner/partner.js");
 
 
 /***/ })

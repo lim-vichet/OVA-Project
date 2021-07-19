@@ -6,6 +6,8 @@ use App\Http\Controllers\Backend\MissionController;
 use App\Http\Controllers\Backend\LogoController;
 use App\Http\Controllers\Backend\CharityController;
 use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Backend\SlideController;
+
 
 Route::group(['prefix'=>'backend'], function (){
     Route::get('login', [AuthController::class, 'index'])->name('login');
@@ -46,10 +48,18 @@ Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
         Route::get('show',[CharityController::class,'Show_detail'])->name('show');
         Route::post('charity_insert',[CharityController::class,'insert'])->name('charity_insert');
     });
+
     Route::group(['prefix'=>'contact'], function (){
         Route::get('/',[ContactController::class,'index'])->name('contact.index');
         Route::get('ajax-table',[ContactController::class,'ContactAjaxTable'])->name('contact.ajaxtable');
-        Route::post('contact_insert',[ContactController::class,'insert'])->name('contact_insert');
+        Route::post('contact_insert',[ContactController::class,'insert'])->name('contact.insert');
+        Route::get('destroy/{id}',[ContactController::class,'destroy'])->name('contact.destroy');
+        Route::get('edit/{id}',[ContactController::class,'show'])->name('contact.show');
+        Route::post('update/{id}',[ContactController::class,'update'])->name('contact.update');
+    });
+
+    Route::group(['prefix'=>'slide'], function (){
+       Route::get('/',[SlideController::class,'index'])->name('slide.index');
     });
 
 });
