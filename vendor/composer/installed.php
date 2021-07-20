@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '7e21288922f4f40ccf8be39c61bfa0ca51ebb7f8',
+    'reference' => 'a1c81f3b9a385d528f9aecd9dfcc4bc75f9eef88',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -99,12 +99,12 @@
     ),
     'facade/ignition' => 
     array (
-      'pretty_version' => '2.11.0',
-      'version' => '2.11.0.0',
+      'pretty_version' => '2.11.1',
+      'version' => '2.11.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dc6818335f50ccf0b90284784718ea9a82604286',
+      'reference' => '9811711981f0aca8b354d0ff00b29ad49e4af556',
     ),
     'facade/ignition-contracts' => 
     array (
@@ -413,7 +413,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '7e21288922f4f40ccf8be39c61bfa0ca51ebb7f8',
+      'reference' => 'a1c81f3b9a385d528f9aecd9dfcc4bc75f9eef88',
     ),
     'laravel/tinker' => 
     array (
@@ -426,12 +426,12 @@
     ),
     'league/commonmark' => 
     array (
-      'pretty_version' => '1.6.5',
-      'version' => '1.6.5.0',
+      'pretty_version' => '1.6.6',
+      'version' => '1.6.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => '44ffd8d3c4a9133e4bd0548622b09c55af39db5f',
+      'reference' => 'c4228d11e30d7493c6836d20872f9582d8ba6dcf',
     ),
     'league/flysystem' => 
     array (
@@ -462,12 +462,12 @@
     ),
     'monolog/monolog' => 
     array (
-      'pretty_version' => '2.3.0',
-      'version' => '2.3.0.0',
+      'pretty_version' => '2.3.1',
+      'version' => '2.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'df991fd88693ab703aa403413d83e15f688dae33',
+      'reference' => '9738e495f288eec0b187e310b7cdbbb285777dbe',
     ),
     'myclabs/deep-copy' => 
     array (
@@ -520,12 +520,12 @@
     ),
     'phar-io/manifest' => 
     array (
-      'pretty_version' => '2.0.1',
-      'version' => '2.0.1.0',
+      'pretty_version' => '2.0.3',
+      'version' => '2.0.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '85265efd3af7ba3ca4b2a2c34dbfc5788dd29133',
+      'reference' => '97803eca37d319dfa7826cc2437fc020857acb53',
     ),
     'phar-io/version' => 
     array (
@@ -628,12 +628,12 @@
     ),
     'phpunit/phpunit' => 
     array (
-      'pretty_version' => '9.5.6',
-      'version' => '9.5.6.0',
+      'pretty_version' => '9.5.7',
+      'version' => '9.5.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'fb9b8333f14e3dce976a60ef6a7e05c7c7ed8bfb',
+      'reference' => 'd0dc8b6999c937616df4fb046792004b33fd31c5',
     ),
     'piseth/storagehelper' => 
     array (
@@ -738,8 +738,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0.0',
-        1 => '1.0',
+        0 => '1.0',
+        1 => '1.0.0',
       ),
     ),
     'psr/simple-cache' => 

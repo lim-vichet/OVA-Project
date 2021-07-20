@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +21,8 @@ include_once 'backend/backendRoute.php';
 //    return view('welcome');
 //});
 
+
+//HomeController
 Route::get('/',[HomeController::class,'Index'])->name('/');
 Route::get('header',[HomeController::class,'Header'])->name('header');
 Route::get('footer',[HomeController::class,'Footer'])->name('footer');
@@ -33,3 +34,4 @@ Route::get('activity',[HomeController::class,'Activity'])->name('activity');
 Route::get('page-detail',[HomeController::class,'Page_Detail'])->name('page-detail');
 Route::get('charity',[HomeController::class,'Charity'])->name('charity');
 Route::get('contact',[HomeController::class,'Contact'])->name('contact');
+

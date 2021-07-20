@@ -30,9 +30,9 @@ class ComposerStaticInit90c82f02aebf2124936e9a10824acc9e
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-        'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '0b47d6d4a00ca9112ba3953b49e7c9a4' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/helper.php',
     );
 
@@ -486,11 +486,14 @@ class ComposerStaticInit90c82f02aebf2124936e9a10824acc9e
     );
 
     public static $classMap = array (
+        'App\\Charity' => __DIR__ . '/../..' . '/app/Charity.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Contact' => __DIR__ . '/../..' . '/app/Contact.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Backend\\ActivityController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/ActivityController.php',
         'App\\Http\\Controllers\\Backend\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/AuthController.php',
         'App\\Http\\Controllers\\Backend\\DirectorController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/DirectorController.php',
+        'App\\Http\\Controllers\\Backend\\LogoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/LogoController.php',
         'App\\Http\\Controllers\\Backend\\MissionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/MissionController.php',
         'App\\Http\\Controllers\\Backend\\PartnerController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/PartnerController.php',
         'App\\Http\\Controllers\\Backend\\StructureController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/StructureController.php',
@@ -506,6 +509,7 @@ class ComposerStaticInit90c82f02aebf2124936e9a10824acc9e
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Logo' => __DIR__ . '/../..' . '/app/Logo.php',
         'App\\Model\\Backend\\Activity' => __DIR__ . '/../..' . '/app/Model/Backend/Activity.php',
         'App\\Model\\Backend\\Director' => __DIR__ . '/../..' . '/app/Model/Backend/Director.php',
         'App\\Model\\Backend\\Mission' => __DIR__ . '/../..' . '/app/Model/Backend/Mission.php',
@@ -517,6 +521,7 @@ class ComposerStaticInit90c82f02aebf2124936e9a10824acc9e
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Slide' => __DIR__ . '/../..' . '/app/Slide.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',

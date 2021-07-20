@@ -53,6 +53,10 @@ $(document).on('click', '#btnDisable', function () {
     };
     xhr.send();
 });
+var btnEdit = document.getElementsByClassName('btnEdit');
+Array.from(btnEdit).forEach(function () {
+
+});
 
 $(document).on('click', '#btnEdit', function () {
     PartnerId = $(this).attr('data-id');

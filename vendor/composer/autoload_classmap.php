@@ -6,11 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Charity' => $baseDir . '/app/Charity.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Contact' => $baseDir . '/app/Contact.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Backend\\ActivityController' => $baseDir . '/app/Http/Controllers/Backend/ActivityController.php',
     'App\\Http\\Controllers\\Backend\\AuthController' => $baseDir . '/app/Http/Controllers/Backend/AuthController.php',
     'App\\Http\\Controllers\\Backend\\DirectorController' => $baseDir . '/app/Http/Controllers/Backend/DirectorController.php',
+    'App\\Http\\Controllers\\Backend\\LogoController' => $baseDir . '/app/Http/Controllers/Backend/LogoController.php',
     'App\\Http\\Controllers\\Backend\\MissionController' => $baseDir . '/app/Http/Controllers/Backend/MissionController.php',
     'App\\Http\\Controllers\\Backend\\PartnerController' => $baseDir . '/app/Http/Controllers/Backend/PartnerController.php',
     'App\\Http\\Controllers\\Backend\\StructureController' => $baseDir . '/app/Http/Controllers/Backend/StructureController.php',
@@ -26,6 +29,7 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Logo' => $baseDir . '/app/Logo.php',
     'App\\Model\\Backend\\Activity' => $baseDir . '/app/Model/Backend/Activity.php',
     'App\\Model\\Backend\\Director' => $baseDir . '/app/Model/Backend/Director.php',
     'App\\Model\\Backend\\Mission' => $baseDir . '/app/Model/Backend/Mission.php',
@@ -37,6 +41,7 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\Slide' => $baseDir . '/app/Slide.php',
     'App\\User' => $baseDir . '/app/User.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/CorsService.php',
