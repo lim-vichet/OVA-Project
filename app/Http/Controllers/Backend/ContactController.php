@@ -46,6 +46,7 @@ class ContactController extends Controller
         $contact->save();
         return redirect()->route('contact.index');
     }
+
     function destroy($id){
         Contact::where('id', $id)->update([
             'status'    => 0

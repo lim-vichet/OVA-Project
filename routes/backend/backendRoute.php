@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\LogoController;
 use App\Http\Controllers\Backend\CharityController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\SlideController;
+use App\Http\Controllers\Backend\UserController;
 
 
 Route::group(['prefix'=>'backend'], function (){
@@ -14,6 +15,11 @@ Route::group(['prefix'=>'backend'], function (){
     Route::post('login', [AuthController::class, 'store'])->name('login.store');
     Route::get('logout', [AuthController::class, 'logout'])->name('login.logout');
 });
+//user
+Route::group(['prefix'=>'backend'], function (){
+    Route::get('/',[UserController::class,'index'])->name('user.index');
+});
+
 Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
     Route::get('/index', function (){
         return view('backend/master/masterpage');
@@ -60,6 +66,13 @@ Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
 
     Route::group(['prefix'=>'slide'], function (){
        Route::get('/',[SlideController::class,'index'])->name('slide.index');
+       Route::get('ajax-table',[SlideController::class,'SlideAjaxTable'])->name('slide.ajaxtable');
+       Route::post('slide_insert',[SlideController::class,'insert'])->name('slide.insert');
+       Route::get('destroy/{id}',[SlideController::class,'destroy'])->name('slide.destroy');
+       Route::get('edit/{id}',[SlideController::class,'show'])->name('slide.show');
+       Route::post('update/{id}',[SlideController::class,'update'])->name('slide.update');
+
+
     });
 
 });
