@@ -11,3 +11,12 @@
 
 ## 20-07-2021
 - merge vichet2 to brey
+
+## 21-07-2021
+    ### Link data
+    * Homepage
+    * Activity
+    * Vision
+    * Director
+    * Mission
+    * Structure
