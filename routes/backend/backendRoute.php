@@ -9,15 +9,11 @@ use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\SlideController;
 use App\Http\Controllers\Backend\UserController;
 
-
+//login
 Route::group(['prefix'=>'backend'], function (){
     Route::get('login', [AuthController::class, 'index'])->name('login');
     Route::post('login', [AuthController::class, 'store'])->name('login.store');
     Route::get('logout', [AuthController::class, 'logout'])->name('login.logout');
-});
-//user
-Route::group(['prefix'=>'backend'], function (){
-    Route::get('/',[UserController::class,'index'])->name('user.index');
 });
 
 Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
@@ -71,8 +67,15 @@ Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
        Route::get('destroy/{id}',[SlideController::class,'destroy'])->name('slide.destroy');
        Route::get('edit/{id}',[SlideController::class,'show'])->name('slide.show');
        Route::post('update/{id}',[SlideController::class,'update'])->name('slide.update');
-
-
+    });
+    //user
+    Route::group(['prefix'=>'user'], function (){
+        Route::get('/',[UserController::class,'index'])->name('user.index');
+        Route::get('ajax-table',[UserController::class,'userAjaxTable'])->name('user.ajaxtable');
+        Route::post('user_insert',[UserController::class,'insert'])->name('user.insert');
+        Route::get('destroy/{id}',[UserController::class,'destroy'])->name('user.destroy');
+        Route::get('edit/{id}',[UserController::class,'show'])->name('user.show');
+        Route::post('update/{id}',[UserController::class,'update'])->name('user.update');
     });
 
 });

@@ -162,6 +162,7 @@ $(document).on('click', '#btnEdit', function () {
   xhr.onload = function () {
     if (xhr.status === 200) {
       var data = JSON.parse(xhr.responseText);
+      id.value = data.id;
       address.value = data.address;
       phone.value = data.phone;
       email.value = data.email;
