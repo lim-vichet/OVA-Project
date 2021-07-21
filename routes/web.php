@@ -17,9 +17,6 @@ use App\Http\Controllers\HomeController;
  * Backend routes
 */
 include_once 'backend/backendRoute.php';
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 
 
 //HomeController
@@ -31,7 +28,7 @@ Route::get('mission',[HomeController::class,'Mission'])->name('mission');
 Route::get('vision',[HomeController::class,'Vision'])->name('vision');
 Route::get('structure',[HomeController::class,'Structure'])->name('structure');
 Route::get('activity',[HomeController::class,'Activity'])->name('activity');
-Route::get('page-detail',[HomeController::class,'Page_Detail'])->name('page-detail');
+Route::get('page-detail/{id}',[HomeController::class,'Page_Detail'])->name('page-detail');
 Route::get('charity',[HomeController::class,'Charity'])->name('charity');
 Route::get('contact',[HomeController::class,'Contact'])->name('contact');
 

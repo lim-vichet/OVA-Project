@@ -8,86 +8,20 @@
                 </div>
 
                 <div class="row box-body-item">
-                    <div class=" box-item col-xl-3" >
-                        <a href="{{route('page-detail')}}" style="text-decoration: none;">
-                            <div class="image-box">
-                                <img src="{{asset('img/par5.jpg')}}" alt="">
+                    @if(!empty($activityDatas))
+                        @foreach($activityDatas as $activity)
+                            <div class=" box-item col-xl-3" >
+                                <a href="{{route('page-detail', [$activity->id])}}" style="text-decoration: none;">
+                                    <div class="image-box">
+                                        <img src="{{asset('storage/backend/activity/'.$activity->thumbnail)}}" alt="{{$activity->thumbnail}}">
+                                    </div>
+                                    <div class="title-box">
+                                        <h1>{{substr($activity->title, 0, 20)}}...</h1>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="title-box">
-                                <h1>ចំណងជើង...</h1>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="box-item col-xl-3" >
-                        <a href="#" style="text-decoration: none;">
-                            <div class="image-box">
-                                <img src="{{asset('img/par5.jpg')}}" alt="">
-                            </div>
-                            <div class="title-box">
-                                <h1>ចំណងជើង...</h1>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="box-item col-xl-3" >
-                        <a href="#" style="text-decoration: none;">
-                            <div class="image-box">
-                                <img src="{{asset('img/par5.jpg')}}" alt="">
-                            </div>
-                            <div class="title-box">
-                                <h1>ចំណងជើង...</h1>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="box-item col-xl-3" >
-                        <a href="#" style="text-decoration: none;">
-                            <div class="image-box">
-                                <img src="{{asset('img/par5.jpg')}}" alt="">
-                            </div>
-                            <div class="title-box">
-                                <h1>ចំណងជើង...</h1>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="box-item col-xl-3" >
-                        <a href="#" style="text-decoration: none;">
-                            <div class="image-box">
-                                <img src="{{asset('img/par5.jpg')}}" alt="">
-                            </div>
-                            <div class="title-box">
-                                <h1>ចំណងជើង...</h1>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="box-item col-xl-3" >
-                        <a href="#" style="text-decoration: none;">
-                            <div class="image-box">
-                                <img src="{{asset('img/par5.jpg')}}" alt="">
-                            </div>
-                            <div class="title-box">
-                                <h1>ចំណងជើង...</h1>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="box-item col-xl-3" >
-                        <a href="#" style="text-decoration: none;">
-                            <div class="image-box">
-                                <img src="{{asset('img/par5.jpg')}}" alt="">
-                            </div>
-                            <div class="title-box">
-                                <h1>ចំណងជើង...</h1>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="box-item col-xl-3" >
-                        <a href="#" style="text-decoration: none;">
-                            <div class="image-box">
-                                <img src="{{asset('img/par5.jpg')}}" alt="">
-                            </div>
-                            <div class="title-box">
-                                <h1>ចំណងជើង...</h1>
-                            </div>
-                        </a>
-                    </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>
@@ -100,52 +34,13 @@
                     </div>
                     <div class="slider">
                         <div class="slide-track">
-{{--                            9 slides--}}
-                            <div class="slides">
-                                <img src="{{asset('img/1.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/2.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/3.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/4.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/5.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/6.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/7.jpg')}}" alt="">
-                            </div>
-
-{{--                            same 7 slide--}}
-                            <div class="slides">
-                                <img src="{{asset('img/1.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/2.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/3.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/4.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/5.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/6.jpg')}}" alt="">
-                            </div>
-                            <div class="slides">
-                                <img src="{{asset('img/7.jpg')}}" alt="">
-                            </div>
-
+                            @if(!empty($partnerDatas))
+                                @foreach($partnerDatas as $partner)
+                                    <div class="slides">
+                                        <img src="{{asset('storage/backend/partner/'.$partner->logo)}}" alt="">
+                                    </div>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>

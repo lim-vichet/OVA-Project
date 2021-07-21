@@ -1,4 +1,8 @@
-
+<?php
+    use App\Http\Controllers\backend\SlideController;
+    use App\Slide;
+    $slideDatas = Slide::where('status', 1)->get(['id', 'name', 'img']);
+?>
 <div class="container bg1">
     <div class="row">
         <div class="col-xl-12">
@@ -51,16 +55,13 @@
                                 <div class="btn-slide btn-next">
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
-                                <div class="slide">
-
-                                    <img src="{{asset('img/par4.jpg')}}">
-                                </div>
-                                <div class="slide">
-                                    <img src="{{asset('img/par5.jpg')}}">
-                                </div>
-                                <div class="slide">
-                                    <img src="{{asset('img/par6.jpg')}}">
-                                </div>
+                                @if(!empty($slideDatas))
+                                    @foreach($slideDatas as $slide)
+                                        <div class="slide">
+                                            <img src="{{asset('storage/upload/'.$slide->img)}}">
+                                        </div>
+                                    @endforeach
+                                @endif
                             </div>
                             <div class="col-xl-4 col-lg-4 pr-xl-0 pl-xl-1">
                                 <div class="col-xl-12 news">

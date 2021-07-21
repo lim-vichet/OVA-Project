@@ -2,6 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Frontend\ActivityController;
+use App\Http\Controllers\Frontend\DirectorController;
+use App\Http\Controllers\Frontend\MissionController;
+use App\Http\Controllers\Frontend\PartnerController;
+use App\Http\Controllers\Frontend\StructureController;
+use App\Http\Controllers\Frontend\VisionController;
+use App\Model\Backend\Activity;
+use App\Slide;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,25 +21,33 @@ class HomeController extends Controller
         return view('include/footer');
     }
     function Index(){
-        return view('Auth/index');
+        $partnerDatas = PartnerController::getAllDatas();
+        $activityDatas = ActivityController::getAllActivityDatas();
+        return view('Auth/index', compact('partnerDatas', 'activityDatas'));
     }
     function Director(){
-        return view('Auth/director');
+        $directorData = DirectorController::getDirectorData();
+        return view('Auth/director', compact('directorData'));
     }
     function Mission(){
-        return view('Auth/mission');
+        $missionData = MissionController::getMisionData();
+        return view('Auth/mission', compact('missionData'));
     }
     function Vision(){
-        return view('Auth/vision');
+        $visionData = VisionController::getVisionData();
+        return view('Auth/vision', compact('visionData'));
     }
     function Structure(){
-        return view('Auth/structure');
+        $structureData = StructureController::getStructureData();
+        return view('Auth/structure', compact('structureData'));
     }
     function Activity(){
-        return view('Auth/activity');
+        $activityDatas = ActivityController::getAllActivityDatas();
+        return view('Auth/activity', compact('activityDatas'));
     }
-    function Page_Detail(){
-        return view('Auth/page-detail');
+    function Page_Detail($id){
+        $activityData = Activity::find($id);
+        return view('Auth/page-detail', compact('activityData'));
     }
     function Charity(){
         return view('Auth/charity');
