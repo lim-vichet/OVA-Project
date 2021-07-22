@@ -1,48 +1,49 @@
 // Dependency Element
 var xhr = new XMLHttpRequest();
-var frmContact = document.getElementById('frmContact');
+var frmUser = document.getElementById('frmUser');
 var btnSave = document.getElementById('btnSave');
 
-const address = document.getElementById('address');
-const phone = document.getElementById('phone');
+
+const name = document.getElementById('name');
 const email = document.getElementById('email');
+const password = document.getElementById('password');
 const img = document.getElementById('img');
 
 // Dependency Variable
-const tableId = 'contactTable';
+const tableId = 'userTable';
 var NeworUpdate = 0; // 0 = New and 1 = Update
-var PartnerId = null;
+var UserId = null;
 
 // Dependency URL
-var urlCreate = `${window.origin}/backend/contact/contact_insert`;
-var urlDisable = `${window.origin}/backend/contact/destroy`;
-var urlEdit =  `${window.origin}/backend/contact/edit`;
-var urlUpdate = `${window.origin}/backend/contact/update`;
+var urlCreate = `${window.origin}/backend/user/user_insert`;
+var urlDisable = `${window.origin}/backend/user/destroy`;
+var urlEdit =  `${window.origin}/backend/user/edit`;
+var urlUpdate = `${window.origin}/backend/user/update`;
 
 
 btnSave.addEventListener('click', function (e) {
-    const frmData = new FormData(frmContact);
+    const frmData = new FormData(frmUser);
     if (NeworUpdate === 0){
         xhr.open('post', urlCreate, true);
         xhr.onload = function () {
             if (xhr.status === 200){
                 reloadDataTabel(tableId);
-                address.value = "";
-                phone.value = "";
+                name.value = "";
                 email.value = "";
+                password.value = "";
                 img.filename = "";
             }
         };
     }else if (NeworUpdate === 1){
-        xhr.open('post', `${urlUpdate}/${ContactId}`);
+        xhr.open('post', `${urlUpdate}/${UserId}`);
         xhr.onload = function () {
             if (xhr.status === 200){
                 reloadDataTabel(tableId);
                 NeworUpdate = 0;
-                ContactId = null;
-                address.value = "";
-                phone.value = "";
+                UserId = null;
+                name.value = "";
                 email.value = "";
+                password.value = "";
                 img.filename = "";
             }
         };
@@ -61,15 +62,15 @@ $(document).on('click', '#btnDisable', function () {
 });
 
 $(document).on('click', '#btnEdit', function () {
-    ContactId = $(this).attr('data-id');
-    xhr.open('get', `${urlEdit}/${ContactId}`);
+    UserId = $(this).attr('data-id');
+    xhr.open('get', `${urlEdit}/${UserId}`);
     xhr.onload = function () {
         if (xhr.status === 200){
             let data = JSON.parse(xhr.responseText);
             id.value = data.id;
-            address.value = data.address;
-            phone.value = data.phone;
+            name.value = data.name;
             email.value = data.email;
+            password.value = data.password;
             img.filename = data.img;
             NeworUpdate = 1;
         }

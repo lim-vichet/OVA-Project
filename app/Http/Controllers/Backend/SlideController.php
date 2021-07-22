@@ -32,7 +32,6 @@ class SlideController extends Controller
     }
     function insert(Request $request){
         $slide = new Slide();
-//        $slide->id = $request->id;
         $slide->name = $request->name;
         if ($request->hasFile('img')){
             $file = $request->file('img')->getClientOriginalName();

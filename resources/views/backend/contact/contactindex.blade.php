@@ -8,10 +8,12 @@
 @section('content')
     <div class="col-xl-12">
         <div class="row">
-            <div class="col-xl-4">
+            <div class="col-xl-4 offset-4"style="background-color: #2B81AF; margin-bottom: 20px; padding: 30px; color: black; border-radius: 10px;">
                 <form action="#" id="frmContact" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <div class="row">
+                        <label for="id">ID</label>
+                        <input class="form-control mb-2" type="text" id="id" name="id" readonly="">
                         <label for="address">Address</label>
                         <input class="form-control mb-2" type="text" id="address" name="address" placeholder="address">
                         <label for="phone">Phone</label>
@@ -22,7 +24,7 @@
                         <label for="photo">Photo</label>
                         <input type="file" class="form-control" id="img" accept=".png,.jpg,.jpeg" name="img">
                         <div class="col-xl-12 p-0">
-                            <input type="button" id="btnSave" class="btn btn-primary mt-2" value="Save">
+                            <input type="button" id="btnSave" class="btn btn-primary mt-2" value="Save" style="background-color: greenyellow; color: black;">
                         </div>
                     </div>
                 </form>
@@ -31,6 +33,7 @@
                 <table id="contactTable" class="table table-bordered table-striped" width="100%">
                     <thead>
                     <tr>
+                        <th >ID</th>
                         <th >Address</th>
                         <th >Phone</th>
                         <th >Email</th>
@@ -54,6 +57,7 @@
                     dataSrc: 'data'
                 },
                 columns: [
+                    {name: 'id', data: 'id'},
                     {name: 'address', data: 'address'},
                     {name: 'phone', data: 'phone'},
                     {name: 'email', data: 'email'},

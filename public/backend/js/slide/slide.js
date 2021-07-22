@@ -63,7 +63,7 @@ $(document).on('click', '#btnEdit', function () {
     xhr.onload = function () {
         if (xhr.status === 200){
             let data = JSON.parse(xhr.responseText);
-            // id.value = data.id;
+            id.value = data.id;
             name.value = data.name;
             img.filename = data.img;
             NeworUpdate = 1;
