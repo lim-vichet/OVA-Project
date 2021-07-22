@@ -14,11 +14,9 @@ use App\Http\Controllers\Backend\SlideController;
 use App\Http\Controllers\Backend\UserController;
 
 //login
-Route::group(['prefix'=>'backend'], function (){
-    Route::get('login', [AuthController::class, 'index'])->name('login');
-    Route::post('login', [AuthController::class, 'store'])->name('login.store');
-    Route::get('logout', [AuthController::class, 'logout'])->name('login.logout');
-});
+Route::get('login', [AuthController::class, 'index'])->name('login');
+Route::post('login-store', [AuthController::class, 'ww'])->name('login.store');
+Route::get('logout', [AuthController::class, 'logout'])->name('login.logout');
 
 Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
     Route::get('/index', function (){

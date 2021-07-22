@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use Facade\FlareClient\Report;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -17,6 +15,7 @@ class AuthController extends Controller
 
     public function store(Request $request)
     {
+        dd($request);
         $request->validate([
             'username'  => 'required',
             'password'  => 'required'
@@ -25,7 +24,7 @@ class AuthController extends Controller
             'name'  => $request->username,
             'password'  => $request->password
         ];
-        if(Auth::attempt($critical, true)){
+        if(Auth::attempt($critical)){
             return redirect()->route('dashboard');
         }else{
             return "Can't login";

@@ -1,13 +1,17 @@
 <?php
     use App\Http\Controllers\backend\SlideController;
     use App\Slide;
+    use App\Model\Backend\Activity;
     $slideDatas = Slide::where('status', 1)->get(['id', 'name', 'img']);
+//    $lastActivityData = Activity::orderBy('id', 'DESC')->first();
+//    var_dump($lastActivityData);
+//    die();
 ?>
 <div class="container bg1">
     <div class="row">
         <div class="col-xl-12">
             <div class="logo">
-                <img src="img/logo-our.png" alt="">
+                <img src="{{asset('img/logo-our.png')}}" alt="">
             </div>
             <div class="title">
                 <h1>សមាគមន៍ភូមិយើង</h1>

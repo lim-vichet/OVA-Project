@@ -6,7 +6,9 @@
                <div class="location-box">
                    <a href="https://goo.gl/maps/1nDVQ7UcRQ66Uc3n8" target="_blank">
                        <div class="location-image">
-                           <img src="{{asset('img/location.JPG')}}" alt="">
+                           @if(!empty($contactData))
+                                <img src="{{asset('storage/upload/'.$contactData ? $contactData->img : '')}}" alt="">
+                           @endif
                        </div>
                    </a>
                </div>
@@ -22,7 +24,7 @@
                             </div>
                             <div class="address-box">
                                 <p style="font-weight: bold">ទីស្នាក់ការកណ្តាល</p>
-                                <p>ផ្ទះលេខ​៨០ ផ្លូវលេខ ៣១៥ ភូមិ៧ សង្កាត់បឹងកក់ទី២ ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</p>
+                                <p>{{$contactData->address ?? ''}}</p>
                             </div>
                         </div>
                         <div class="contact-item" style="margin-top: 10px;">
@@ -31,8 +33,7 @@
                             </div>
                             <div class="address-box">
                                 <p style="font-weight: bold">លេខទូរស័ព្ទ</p>
-                                <p>(+855) 93 999 111</p>
-                                <p>(+855) 23 999 033</p>
+                                <p>{{$contactData->phone ?? ''}}</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -41,7 +42,7 @@
                             </div>
                             <div class="address-box">
                                 <p style="font-weight: bold">អ៊ីម៉ែល</p>
-                                <p>kiki@gmail.com</p>
+                                <p>{{$contactData->email ?? ''}}</p>
                             </div>
                         </div>
                     </div>
