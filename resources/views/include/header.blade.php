@@ -97,7 +97,9 @@
                 </div>
                 <div class="search col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8">
                     <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-                        <input type="text" placeholder="Search.." name="search2">
+                        {{csrf_field()}}
+                        <input type="text" placeholder="Search.." id="itemPicker" name="item">
+                        <input type="hidden" value="" name="txtActivitySearch" class="output">
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 </div>

@@ -60,4 +60,10 @@ class HomeController extends Controller
         $contactData = Contact::first();
         return view('Auth/contact', compact('contactData'));
     }
+
+    public function ActivitySearch($textForSearch=null)
+    {
+        $activityTitle = Activity::all(['id', 'title']);
+        return response()->json($activityTitle);
+    }
 }

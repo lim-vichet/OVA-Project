@@ -35,3 +35,8 @@ Route::get('page-detail/{id}',[HomeController::class,'Page_Detail'])->name('page
 Route::get('charity',[HomeController::class,'Charity'])->name('charity');
 Route::get('contact',[HomeController::class,'Contact'])->name('contact');
 
+/**
+ * Search
+ */
+Route::get('user-search/{textforsearch?}', [HomeController::class, 'ActivitySearch'])->name('ActivitySearch');
+
