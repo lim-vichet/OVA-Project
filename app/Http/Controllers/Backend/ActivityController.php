@@ -33,6 +33,7 @@ class ActivityController extends Controller
 
     public function store(Request $request)
     {
+        dd($request);
         $request->validate([
             'txtTitle'    => 'required',
             'txtThumbnail'    => 'required|mimes:jpg,png,jpeg,gif',

@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <form action="#" id="frmActivity" method="post" enctype="multipart/form-data">
-                    {{csrf_field()}}
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="entry-head">
                         <div class="thumbnail-contain">
                             <input type="file" class="txtThumbnail" id="txtThumbnail" name="txtThumbnail" accept=".jpg,.jpeg,.jpeg,.gif">

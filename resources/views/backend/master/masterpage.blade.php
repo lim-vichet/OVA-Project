@@ -151,7 +151,7 @@
                             <li><a href="{{route('charity.index')}}"><i class="fa fa-laptop"></i>សប្បុរសធម៍</a></li>
                             <li><a href="{{route('contact.index')}}"><i class="fa fa-laptop"></i>ទំនាក់ទំនង</a></li>
                             <li><a href="{{route('slide.index')}}"><i class="fa fa-laptop"></i>ស្លាយរូបភាព</a></li>
-                            <li><a href="{{route('slide.index')}}"><i class="fa fa-laptop"></i>អេដមីន</a></li>
+{{--                            <li><a href="{{route('slide.index')}}"><i class="fa fa-laptop"></i>អេដមីន</a></li>--}}
                             {{--                            <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>--}}
                             <li><a href="{{route('user.index')}}"><i class="fa fa-laptop"></i>អេដមីន</a></li>
 

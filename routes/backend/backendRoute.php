@@ -18,7 +18,7 @@ Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('login-store', [AuthController::class, 'ww'])->name('login.store');
 Route::get('logout', [AuthController::class, 'logout'])->name('login.logout');
 
-Route::group(['prefix' => 'backend', 'middleware'=>'auth'], function (){
+Route::group(['prefix' => 'backend'], function (){
     Route::get('/index', function (){
         return view('backend/master/masterpage');
     })->name('dashboard');

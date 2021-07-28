@@ -3,9 +3,7 @@
     use App\Slide;
     use App\Model\Backend\Activity;
     $slideDatas = Slide::where('status', 1)->get(['id', 'name', 'img']);
-//    $lastActivityData = Activity::orderBy('id', 'DESC')->first();
-//    var_dump($lastActivityData);
-//    die();
+    $lastActivityData = Activity::orderBy('id', 'DESC')->first();
 ?>
 <div class="container bg1">
     <div class="row">
@@ -76,11 +74,10 @@
                                     </div>
                                     <div class="news-box2">
                                         <div class="news-title">
-                                            <h1>ការចែកថ្នាំ...</h1>
+                                            <h1>{{$lastActivityData ? $lastActivityData->title : ''}}</h1>
                                             <br>
                                             <h2>
-                                                កម្មវិធីបណ្ដុះបណ្ដាលវិជ្ជាជីវះនេះធ្វើអោយនិស្សិតអាចអភិវឌ្ឍជំនាញវិជ្ជាជីវះដែលគួរអោយចង់បានបំផុតនៅក្នុងសេដ្ធកិច្ចពិភពលោក។ និស្សិតនិងអាចស្វែងរកការងារដែលមានប្រាក់ខែខ្ពស់ដូច្នេះពួកគេអាចគាំទ្រ
-                                                កម្មវិធីបណ្ដុះបណ្ដាលវិជ្ជាជីវះនេះធ្វើអោយនិស្សិតអាចអភិវឌ្ឍជំនាញវិជ្ជាជីវះដែលគួរអោយចង់បានបំផុតនៅក្នុងសេដ្ធកិច្ចពិភពលោក...
+                                                {!! $lastActivityData ? substr($lastActivityData->detail, 0, 160).'...' : '' !!}
                                             </h2>
                                             <div class="read-more">
                                                 អានបន្ត
