@@ -1,4 +1,3 @@
-
 <?php
 use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\PartnerController;

@@ -49,6 +49,7 @@ class HomeController extends Controller
     function Page_Detail($id){
         $activityData = Activity::find($id);
         return view('Auth/page-detail', compact('activityData'));
+
     }
     function Charity(){
         return view('Auth/charity');

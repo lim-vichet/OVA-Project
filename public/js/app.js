@@ -19425,6 +19425,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./resources/sass/backend/activity/activitycss.scss":
 /*!**********************************************************!*\
   !*** ./resources/sass/backend/activity/activitycss.scss ***!
@@ -19440,12 +19441,22 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!****************************************************************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/backend/activity/activitycss.scss ***!
   \****************************************************************************************************************/
+=======
+/***/ 0:
+/*!*************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
+  \*************************************************************/
+>>>>>>> origin/vichet3
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Volumes/DATA/do/Laravel/OT/ova project/ova/resources/js/app.js */"./resources/js/app.js");
+<<<<<<< HEAD
 __webpack_require__(/*! /Volumes/DATA/do/Laravel/OT/ova project/ova/resources/sass/app.scss */"./resources/sass/app.scss");
 module.exports = __webpack_require__(/*! /Volumes/DATA/do/Laravel/OT/ova project/ova/resources/sass/backend/activity/activitycss.scss */"./resources/sass/backend/activity/activitycss.scss");
+=======
+module.exports = __webpack_require__(/*! /Volumes/DATA/do/Laravel/OT/ova project/ova/resources/sass/app.scss */"./resources/sass/app.scss");
+>>>>>>> origin/vichet3
 
 
 /***/ })

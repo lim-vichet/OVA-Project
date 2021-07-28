@@ -6,7 +6,6 @@
                 <div class="box-activity">
                     <h1>សកម្មភាពថ្មីៗ</h1>
                 </div>
-
                 <div class="row box-body-item">
                     @if(!empty($activityDatas))
                         @foreach($activityDatas as $activity)
@@ -44,7 +43,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

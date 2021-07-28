@@ -5,11 +5,48 @@
     $slideDatas = Slide::where('status', 1)->get(['id', 'name', 'img']);
     $lastActivityData = Activity::orderBy('id', 'DESC')->first();
 ?>
+{{--left-side-bar--}}
+<div class="draw-bar">
+    <div class="left-menu">
+        <ul>
+            <li><a href="{{route('/')}}">
+                    <i class="fas fa-plus"></i>ទំព័រដើម
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu1">
+                    <i class="fas fa-plus"></i> អំពីសហគមន៍
+                </a>
+                <div class="sub-left-menu">
+                    <ul>
+                        <li><a href="{{route('director')}}">នាយកសហគមន៍</a></li>
+                        <li><a href="{{route('mission')}}">បេសកកម្ម</a></li>
+                        <li><a href="{{route('vision')}}">ចក្ខុវិស័យ</a></li>
+                        <li><a href="{{route('structure')}}">រចនាសម្ព័័ន្ធ</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="{{route('activity')}}">
+                    <i class="fas fa-plus"></i>សកម្មភាព
+                </a>
+            </li>
+            <li><a href="{{route('charity')}}">
+                    <i class="fas fa-plus"></i>សប្បុរសធម៍
+                </a>
+            </li>
+            <li><a href="{{route('contact')}}">
+                    <i class="fas fa-plus"></i>ទំនាក់ទំនង
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+{{--Header--}}
 <div class="container bg1">
     <div class="row">
-        <div class="col-xl-12">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="logo">
-                <img src="{{asset('img/logo-our.png')}}" alt="">
+                <img src="{{assert('img/logo-our.png')}}" alt="">
             </div>
             <div class="title">
                 <h1>សមាគមន៍ភូមិយើង</h1>
@@ -22,35 +59,48 @@
 <div class="container bg2">
     <div class="row">
         <div class="col-xl-12">
-            <div class="menu">
-                <ul>
-
-                    <li><a href="{{route('/')}}">ទំព័រដើម</a></li>
-                    <li>
-                        <a href="#">អំពីសហគមន៍</a>
-                        <ul>
-                            <li><a href="{{route('director')}}">នាយកសហគមន៍</a></li>
-                            <li><a href="{{route('mission')}}">បេសកកម្ម</a></li>
-                            <li><a href="{{route('vision')}}">ចក្ខុវិស័យ</a></li>
-                            <li><a href="{{route('structure')}}">រចនាសម្ព័័ន្ធ</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="{{route('activity')}}">សកម្មភាព</a></li>
-                    <li><a href="{{route('charity')}}">សប្បុរសធម៍</a></li>
-                    <li><a href="{{route('contact')}}">ទំនាក់ទំនង</a></li>
-                </ul>
-            </div>
-            <div class="search">
-                <div class="search-button">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-4 col-4 menu">
+                    <ul>
+                        <li class="btn-menu">
+                            <a href="#">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </li>
+                        <li><a href="{{route('/')}}">ទំព័រដើម</a></li>
+                        <li>
+                            <a href="#">អំពីសហគមន៍</a>
+                            <ul>
+                                <li><a href="#"></a></li>
+                                <li><a href="{{route('director')}}">នាយកសហគមន៍</a></li>
+                                <li><a href="{{route('mission')}}">បេសកកម្ម</a></li>
+                                <li><a href="{{route('vision')}}">ចក្ខុវិស័យ</a></li>
+                                <li><a href="{{route('structure')}}">រចនាសម្ព័័ន្ធ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{route('activity')}}">សកម្មភាព</a></li>
+                        <li><a href="{{route('charity')}}">សប្បុរសធម៍</a></li>
+                        <li><a href="{{route('contact')}}">ទំនាក់ទំនង</a></li>
+                        <li>
+                            <a href="{{route('login')}}" style="color: greenyellow;">
+                                {{--                                Login--}}
+                                <i class="fas fa-sign-in-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8">
+                    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                        <input type="text" placeholder="Search.." name="search2">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
                 </div>
             </div>
             <div class="col-xl-12 bg3">
                 <div class="row">
-                    <div class="col-xl-12 col-lg-12 slide-news-box">
-                        <div class="row" style="overflow: auto">
-                            <div class="col-xl-8 col-lg-8 slide-box">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 slide-news-box">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 slide-box">
                                 <div class="btn-slide btn-back">
                                     <i class="fas fa-arrow-left"></i>
                                 </div>
@@ -83,21 +133,19 @@
                                                 អានបន្ត
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-12">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 video">
                         <div class="row">
-                            <div class="col-xl-4 col-lg-4 video1" >
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 video1" >
                                 <a href="#">
                                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xmyTtW2kcR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </a>
                             </div>
-                            <div class="col-xl-8 col-lg-8 pr-xl-0 pl-xl-1">
-                                <div class="col-xl-12 video2">
+                            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 video2">
                                     <div class="new-slide-box">
                                         <div class="new-btn-slide new-btn-back">
                                             <i class="fas fa-arrow-left"></i>
@@ -121,7 +169,6 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>

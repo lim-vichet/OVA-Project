@@ -86,5 +86,33 @@ $(document).ready(function(){
         }
         new_slide.eq(n).show();
     });
+    // left-side-bar
+    $('.btn-menu').click(function(){
+        var pop = "<div class='popup'></div>";
+        $('body').append(pop);
+        $('.draw-bar').css({"left":"0"});
+    });
+    // close popup
+    $('body').on('click','.popup',function(){
+        var eThis = $(this);
+        eThis.remove();
+        $('.draw-bar').css({"left":"-250px"});
+    });
+    // left-menu
+    $('.menu1').click(function(){
+        var eThis = $(this);
+        var myPlus = eThis.find('.fa-plus').length;
+        eThis.parent().find('.sub-left-menu').slideToggle();
+        if (myPlus>0) {
+            eThis.find('i').removeClass('fa-plus');
+            eThis.find('i').addClass('fa-minus');
+            eThis.css({"background-color":"blue"});
+        }
+        else{
+            eThis.find('i').addClass('fa-plus');
+            eThis.find('i').removeClass('fa-minus');
+            eThis.css({"background-color":"hotpink"});
+        }
 
+    });
 });

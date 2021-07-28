@@ -96,6 +96,7 @@
 // Dependency Element
 var xhr = new XMLHttpRequest();
 var frmPartner = document.getElementById('frmPartner');
+<<<<<<< HEAD
 var btnSave = document.getElementById('btnSave');
 var txtPartnerName = document.getElementById('txtPartnerName');
 var txtPartnerLogo = document.getElementById('txtPartnerLogo'); // Dependency Variable
@@ -140,6 +141,17 @@ btnSave.addEventListener('click', function (e) {
 });
 $(document).on('click', '#btnDisable', function () {
   xhr.open('get', "".concat(urlDisable, "/").concat($(this).attr('data-id')));
+=======
+var btnSave = document.getElementById('btnSave'); // Dependency Variable
+
+var tableId = 'partnerTable'; // Dependency URL
+
+var urlCreate = "".concat(window.origin, "/backend/partner/store");
+var urlDisable = "".concat(window.origin, "/backend/partner/disable");
+btnSave.addEventListener('click', function (e) {
+  var frmData = new FormData(frmPartner);
+  xhr.open('post', urlCreate, true);
+>>>>>>> origin/vichet3
 
   xhr.onload = function () {
     if (xhr.status === 200) {
@@ -147,6 +159,7 @@ $(document).on('click', '#btnDisable', function () {
     }
   };
 
+<<<<<<< HEAD
   xhr.send();
 });
 var btnEdit = document.getElementsByClassName('btnEdit');
@@ -161,6 +174,16 @@ $(document).on('click', '#btnEdit', function () {
       txtPartnerName.value = data.name;
       txtPartnerLogo.filename = data.logo;
       NeworUpdate = 1;
+=======
+  xhr.send(frmData);
+});
+$(document).on('click', '#btnDisable', function () {
+  xhr.open('get', "".concat(urlDisable, "/").concat($(this).attr('data-id')));
+
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      reloadDataTabel(tableId);
+>>>>>>> origin/vichet3
     }
   };
 

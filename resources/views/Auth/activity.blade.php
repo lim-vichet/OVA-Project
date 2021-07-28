@@ -9,7 +9,7 @@
                 <div class="row box-body-item">
                     @if(!empty($activityDatas))
                         @foreach($activityDatas as $activity)
-                            <div class=" box-item col-xl-3" >
+                            <div class=" box-item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" >
                                 <a href="{{route('page-detail', [$activity->id])}}" style="text-decoration: none;">
                                     <div class="image-box">
                                         <img src="{{asset('storage/backend/activity/'.$activity->thumbnail)}}" alt="{{$activity->thumbnail}}">

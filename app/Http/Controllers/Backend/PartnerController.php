@@ -23,6 +23,7 @@ class PartnerController extends Controller
             return DataTables::of($datas)
                 ->addColumn('action', function ($datas){
                     $button = "<button class='btn btn-primary btn-sm' id='btnEdit' data-id='".$datas->id."'>Edit</button>";
+
                     $button .= "<button class='btn btn-danger btn-sm' id='btnDisable' data-id='".$datas->id."'>Disable</button>";
                     return $button;
                 })

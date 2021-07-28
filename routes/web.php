@@ -18,8 +18,11 @@ use App\Http\Controllers\HomeController;
 */
 include_once 'backend/backendRoute.php';
 
-
 //HomeController
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
 Route::get('/',[HomeController::class,'Index'])->name('/');
 Route::get('header',[HomeController::class,'Header'])->name('header');
 Route::get('footer',[HomeController::class,'Footer'])->name('footer');

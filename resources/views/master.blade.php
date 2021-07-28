@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{asset('css\style.css')}}">
     <link rel="stylesheet" href="{{asset('css/fontawesome-free-5.13.0-web/css/all.min.css')}}">
     <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>@yield("title")</title>
 </head>
 <body>
