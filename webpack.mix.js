@@ -19,5 +19,7 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/backend/structure/structure.js', 'public/backend/js/structure')
     .js('resources/js/backend/activity/activity.js', 'public/backend/js/activity')
     .js('resources/js/backend/contact/contact.js', 'public/backend/js/contact')
+    .js('resources/js/backend/videos/videos.js', 'public/backend/js/videos')
     .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/backend/activity/activitycss.scss', 'public/backend/css/activity');
+    .sass('resources/sass/backend/activity/activitycss.scss', 'public/backend/css/activity')
+    .sass('resources/sass/backend/videos/videoscss.scss', 'public/backend/css/videos');

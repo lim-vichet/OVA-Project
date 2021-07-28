@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Charity;
 use App\Contact;
 use App\Http\Controllers\Frontend\ActivityController;
 use App\Http\Controllers\Frontend\DirectorController;
@@ -52,7 +53,8 @@ class HomeController extends Controller
 
     }
     function Charity(){
-        return view('Auth/charity');
+        $charityData = Charity::first();
+        return view('Auth/charity', compact('charityData'));
     }
     function Contact(){
         $contactData = Contact::first();

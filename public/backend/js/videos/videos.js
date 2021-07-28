@@ -81,36 +81,37 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/backend/partner/partner.js":
-/*!*************************************************!*\
-  !*** ./resources/js/backend/partner/partner.js ***!
-  \*************************************************/
+/***/ "./resources/js/backend/videos/videos.js":
+/*!***********************************************!*\
+  !*** ./resources/js/backend/videos/videos.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 // Dependency Element
 var xhr = new XMLHttpRequest();
-var frmPartner = document.getElementById('frmPartner');
+var frmVideos = document.getElementById('frmVideos');
 var btnSave = document.getElementById('btnSave');
-var txtPartnerName = document.getElementById('txtPartnerName');
-var txtPartnerLogo = document.getElementById('txtPartnerLogo'); // Dependency Variable
+var btnCreate = document.getElementById('btnCreate');
+var txtVideosTitle = document.getElementById('txtTitle');
+var txtVideosDetail = document.getElementById('txtDetail'); // Dependency Variable
 
-var tableId = 'partnerTable';
+var tableId = 'videosTable';
 var NeworUpdate = 0; // 0 = New and 1 = Update
 
-var PartnerId = null; // Dependency URL
+var VideosID = null; // Dependency URL
 
-var urlCreate = "".concat(window.origin, "/backend/partner/store");
-var urlDisable = "".concat(window.origin, "/backend/partner/disable");
-var urlEdit = "".concat(window.origin, "/backend/partner/edit");
-var urlUpdate = "".concat(window.origin, "/backend/partner/update");
+var urlCreate = "".concat(window.origin, "/backend/videos/store");
+var urlDisable = "".concat(window.origin, "/backend/videos/disable");
+var urlEdit = "".concat(window.origin, "/backend/videos/edit");
+var urlUpdate = "".concat(window.origin, "/backend/videos/update");
 btnSave.addEventListener('click', function (e) {
-  var frmData = new FormData(frmPartner);
+  var frmData = new FormData(frmVideos);
 
   if (NeworUpdate === 0) {
     xhr.open('post', urlCreate, true);
@@ -118,27 +119,27 @@ btnSave.addEventListener('click', function (e) {
     xhr.onload = function () {
       if (xhr.status === 200) {
         reloadDataTabel(tableId);
-        txtPartnerName.value = "";
-        txtPartnerLogo.filename = "";
+        txtVideosTitle.value = "";
+        txtVideosDetail.value = "";
       }
     };
   } else if (NeworUpdate === 1) {
-    xhr.open('post', "".concat(urlUpdate, "/").concat(PartnerId));
+    xhr.open('post', "".concat(urlUpdate, "/").concat(VideosID));
 
     xhr.onload = function () {
       if (xhr.status === 200) {
         reloadDataTabel(tableId);
         NeworUpdate = 0;
-        PartnerId = null;
-        txtPartnerName.value = "";
-        txtPartnerLogo.filename = "";
+        VideosID = null;
+        txtVideosTitle.value = "";
+        txtVideosDetail.value = "";
       }
     };
   }
 
   xhr.send(frmData);
 });
-$(document).on('click', '#btnDisable', function () {
+$(document).on('click', '#btnDelete', function () {
   xhr.open('get', "".concat(urlDisable, "/").concat($(this).attr('data-id')));
 
   xhr.onload = function () {
@@ -149,17 +150,15 @@ $(document).on('click', '#btnDisable', function () {
 
   xhr.send();
 });
-var btnEdit = document.getElementsByClassName('btnEdit');
-Array.from(btnEdit).forEach(function () {});
 $(document).on('click', '#btnEdit', function () {
-  PartnerId = $(this).attr('data-id');
-  xhr.open('get', "".concat(urlEdit, "/").concat(PartnerId));
+  VideosID = $(this).attr('data-id');
+  xhr.open('get', "".concat(urlEdit, "/").concat(VideosID));
 
   xhr.onload = function () {
     if (xhr.status === 200) {
       var data = JSON.parse(xhr.responseText);
-      txtPartnerName.value = data.name;
-      txtPartnerLogo.filename = data.logo;
+      txtVideosTitle.value = data.title;
+      txtVideosDetail.value = data.youtube;
       NeworUpdate = 1;
     }
   };
@@ -174,14 +173,14 @@ function reloadDataTabel(tableId) {
 
 /***/ }),
 
-/***/ 1:
-/*!*******************************************************!*\
-  !*** multi ./resources/js/backend/partner/partner.js ***!
-  \*******************************************************/
+/***/ 8:
+/*!*****************************************************!*\
+  !*** multi ./resources/js/backend/videos/videos.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/DATA/do/Laravel/OT/ova project/ova/resources/js/backend/partner/partner.js */"./resources/js/backend/partner/partner.js");
+module.exports = __webpack_require__(/*! /Volumes/DATA/do/Laravel/OT/ova project/ova/resources/js/backend/videos/videos.js */"./resources/js/backend/videos/videos.js");
 
 
 /***/ })

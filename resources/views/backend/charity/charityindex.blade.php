@@ -1,6 +1,6 @@
 @extends('backend.master.masterpage')
 
-@section('title', 'Mission')
+@section('title', 'Charity')
 
 @section('style')
 @endsection
@@ -11,7 +11,7 @@
             <div class="col-xl-12">
                 <form method="POST" id="frmMission" enctype="multipart/form-data" action="{{route('charity_insert')}}" class="">
                     {{csrf_field()}}
-                    <textarea id="txtCharity" name="detail" class="form-control"></textarea>
+                    <textarea id="txtCharity" name="detail" class="form-control">{!! $charity->detail ?? '' !!}</textarea>
                     <div class="row">
                         <div class="col-xl-12">
                             <input type="submit" id="btnSave" class="btn btn-primary mt-2" value="Save">

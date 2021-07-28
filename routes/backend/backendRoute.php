@@ -11,10 +11,11 @@ use App\Http\Controllers\Backend\CharityController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\SlideController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\VideosController;
 
 //login
 Route::get('login', [AuthController::class, 'index'])->name('login');
-Route::post('login-store', [AuthController::class, 'ww'])->name('login.store');
+Route::post('login-store', [AuthController::class, 'store'])->name('login.store');
 Route::get('logout', [AuthController::class, 'logout'])->name('login.logout');
 
 Route::group(['prefix' => 'backend'], function (){
@@ -29,6 +30,15 @@ Route::group(['prefix' => 'backend'], function (){
         Route::get('/disable/{id}', [PartnerController::class, 'destroy'])->name('partner.destroy');
         Route::get('/edit/{id}', [PartnerController::class, 'show'])->name('partner.show');
         Route::post('/update/{id}', [PartnerController::class, 'update'])->name('partner.update');
+    });
+
+    Route::group(['prefix'=>'videos'], function (){
+        Route::get('/', [VideosController::class, 'index'])->name('videos.index');
+        Route::get('/ajax-table', [VideosController::class, 'videosAjaxTable'])->name('videos.ajaxtable');
+        Route::post('/store', [VideosController::class, 'store'])->name('videos.store');
+        Route::get('/disable/{id}', [VideosController::class, 'destroy'])->name('videos.destroy');
+        Route::get('/edit/{id}', [VideosController::class, 'show'])->name('videos.show');
+        Route::post('/update/{id}', [VideosController::class, 'update'])->name('videos.update');
     });
 
     Route::group(['prefix'=>'activity'], function (){
@@ -66,7 +76,7 @@ Route::group(['prefix' => 'backend'], function (){
 
     Route::group(['prefix'=>'charity'], function (){
         Route::get('/',[CharityController::class,'index'])->name('charity.index');
-        Route::get('show',[CharityController::class,'Show_detail'])->name('show');
+        Route::get('show',[CharityController::class,'Show_detail'])->name('charity.show');
         Route::post('charity_insert',[CharityController::class,'insert'])->name('charity_insert');
     });
 

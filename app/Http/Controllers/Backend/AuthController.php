@@ -16,7 +16,6 @@ class AuthController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
         $request->validate([
             'username'  => 'required',
             'password'  => 'required'

@@ -2,8 +2,14 @@
     use App\Http\Controllers\backend\SlideController;
     use App\Slide;
     use App\Model\Backend\Activity;
+    use App\Model\Backend\Videos;
     $slideDatas = Slide::where('status', 1)->get(['id', 'name', 'img']);
     $lastActivityData = Activity::orderBy('id', 'DESC')->first();
+
+    /**
+     * Videos
+    */
+    $videos = Videos::orderBy('updated_at', 'DESC')->get(['id', 'title', 'youtube']);
 ?>
 {{--left-side-bar--}}
 <div class="draw-bar">
@@ -46,7 +52,7 @@
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="logo">
-                <img src="{{assert('img/logo-our.png')}}" alt="">
+                <img src="{{asset('img/logo-our.png')}}" alt="">
             </div>
             <div class="title">
                 <h1>សមាគមន៍ភូមិយើង</h1>
@@ -124,10 +130,10 @@
                                     </div>
                                     <div class="news-box2">
                                         <div class="news-title">
-                                            <h1>{{$lastActivityData ? $lastActivityData->title : ''}}</h1>
+                                            <h1>{!! $lastActivityData ? $lastActivityData->title : '' !!}</h1>
                                             <br>
                                             <h2>
-                                                {!! $lastActivityData ? substr($lastActivityData->detail, 0, 160).'...' : '' !!}
+                                                {{ $lastActivityData ? substr($lastActivityData->detail, 0, 160).'...' : '' }}
                                             </h2>
                                             <div class="read-more">
                                                 អានបន្ត
@@ -140,9 +146,9 @@
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 video">
                         <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 video1" >
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 video1" style="overflow: hidden;">
                                 <a href="#">
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xmyTtW2kcR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    {!! $videos[0]->youtube ?? '' !!}
                                 </a>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 video2">
@@ -153,21 +159,15 @@
                                         <div class="new-btn-slide new-btn-next">
                                             <i class="fas fa-arrow-right"></i>
                                         </div>
-                                        <div class="new-slide">
-                                            <a href="#">
-                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NSaxnP2bFN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            </a>
-                                        </div>
-                                        <div class="new-slide">
-                                            <a href="#">
-                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Y0nI-MwvQ1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            </a>
-                                        </div>
-                                        <div class="new-slide">
-                                            <a href="#">
-                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xmyTtW2kcR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            </a>
-                                        </div>
+                                        @foreach($videos as $ind=>$video)
+                                            @if($ind!=0)
+                                                <div class="new-slide">
+                                                    <a href="#">
+                                                        {!! $video->youtube ?? '' !!}
+                                                    </a>
+                                                </div>
+                                            @endif
+                                        @endforeach
                                     </div>
                             </div>
                         </div>

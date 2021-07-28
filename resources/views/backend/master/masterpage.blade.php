@@ -117,6 +117,7 @@
                             {{--                                </ul>--}}
                             {{--                            </li>--}}
                             <li><a href="{{route('activity.index')}}"><i class="fa fa-laptop"></i>សកម្មភាព</a></li>
+                            <li><a href="{{route('videos.index')}}"><i class="fa fa-laptop"></i>វីឌីអូ</a></li>
                             <li>
                                 <a>
                                     <i class="fa fa-windows"></i> អំពីសមាគមន៍ <span class="fa fa-chevron-down"></span>
